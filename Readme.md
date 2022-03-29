@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Artem Kazuta](https://up.htmlacademy.ru/adaptive/25/user/1853915).
-* Наставник: [Владислав Доровлев](https://htmlacademy.ru/profile/dorovlev).
+* Наставник: 'Владислав Доровлев'.
 
 ---
 
