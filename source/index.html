@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-shrifts.css">
 </head>
 
 <body class="page__body">
@@ -14,15 +16,14 @@
       <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
     </a>
 
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть</span>
       </button>
-
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a href="#" class="main-nav__link">Главная</a>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link main-nav__link--current">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Фото и видео</a>
@@ -40,165 +41,236 @@
 
   <main class="main-container">
 
-    <div class="welcome-sedona" style="background-color: gray;">
-      <img class="welcome-sedona__image" src="img/text-index.svg.svg" alt=" " width="282" height="214">
-    </div>
+    <section class="welcome-sedona">
+      <div class="welcome-sedona__wrapper">
+        <div class="welcome-sedona__image">
+          <img src="img/text-index.svg" alt="Theme" width="282" height="214">
+        </div>
+        <img src="img/intro-triangle.svg" class="welcome-sedona__tri" alt="">
+      </div>
+    </section>
 
     <section class="about-sedona">
-      <div class="about-sedona__header">
-        <h1 class="about-sedona__title">
-          Седона — небольшой городок в Аризоне,<br> заслуживающий большего!
+
+      <header class="about-sedona__header">
+        <h1 class="about-sedona__title title">
+          Седона — небольшой городок в Аризоне, заслуживающий большего!
         </h1>
-        <p class="about-sedona__descrip">
+        <p class="about-sedona__text-reasons text">
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
+      </header>
+
+      <div class="about-sedona__main">
+        <!-- 1 -->
+        <div class="first-reason">
+
+          <div class="first-reason__descrip first-reason__descrip--blue">
+            <div class="first-reason__descrip-block descrip">
+              <h3 class="first-reason__title title">
+                Настоящий городок
+              </h3>
+
+              <div class="first-reason__num num">
+                — №1 —
+              </div>
+
+              <p class="first-reason__text text">
+                Седона не аттракцион для туристов, там течёт своя жизнь
+              </p>
+            </div>
+          </div>
+
+          <img src="img/photo-city@1x 1.jpg" alt="Photo-city" width="320" height="260">
+
+        </div>
+
+        <!-- 2 -->
+        <div class="include-sedona">
+
+          <div class="include-row">
+
+            <div class="include-row__column-advantages column-advantages">
+
+              <div class="include-row__image-title">
+                <div class="include-row__image">
+                  <img src="img/icon-house.svg" alt="House" width="40" height="40">
+                </div>
+                <h3 class="include-row__title title">
+                  Жилье
+                </h3>
+              </div>
+
+              <p class="include-row__text-1 text ">
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
+              </p>
+
+            </div>
+
+            <div class="include-row__column-advantages column-advantages">
+              <div class="include-row__image-title">
+                <div class="include-row__image">
+                  <img src="img/icon-burger.svg" alt="Food" width="40" height="40">
+                </div>
+                <h3 class="include-row__title title">
+                  Еда
+                </h3>
+              </div>
+              <p class="include-row__text-2 text">
+                Всегда заказывайте фирменный бургер, Вы НЕ разочаруетесь!
+              </p>
+            </div>
+
+            <div class="include-row__column-advantages column-advantages">
+              <div class="include-row__image-title">
+                <div class="include-row__image">
+                  <img src="img/icon-gift.svg" alt="Gifts" width="40" height="40">
+                </div>
+                <h3 class="include-row__title title">
+                  Сувениры
+                </h3>
+              </div>
+              <p class="include-row__text-3 text">
+                Не только китайского, но и местного производства!
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- 3 -->
+        <div class="second-reason">
+
+          <img src="img/photo-bridge@1x 1.jpg" alt="Photot-bridge" width="320" height="260">
+
+          <div class="second-reason__descrip second-reason__descrip--blue">
+            <div class="second-reason__descrip-block descrip">
+              <h3 class="second-reason__title title">
+                Там есть Мост дьявола
+              </h3>
+
+              <div class="second-reason__num num">
+                — №2 —
+              </div>
+
+              <p class="second-reason__text text">
+                Да, по нему можно пройти! Если вы осмелитесь, конечно
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="other-reasons">
+          <div class="reasons-columns">
+
+            <div class="reasons-columns__descrip reasons-columns__descrip--gray">
+
+              <div class="reasons-columns__descrip-block descrip">
+
+                <h3 class="reasons-columns__title title">
+                  Небольшая площадь
+                </h3>
+
+                <div class="reasons-columns__num num">
+                  — №3 —
+                </div>
+
+                <p class="reasons-columns__text text">
+                  Все интересные места находятся очень близко
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="reasons-columns__descrip reasons-columns__descrip--gray">
+              <div class="reasons-columns__descrip-block descrip">
+                <h3 class="reasons-columns__title title">
+                  Красивая дорога
+                </h3>
+
+                <div class="reasons-columns__num num">
+                  — №4 —
+                </div>
+
+                <p class="reasons-columns__text text">
+                  Ехать в Седону из Лас-Вегаса совсем не скучно!
+                </p>
+              </div>
+            </div>
+            <div class="reasons-columns__descrip reasons-columns__descrip--gray">
+              <div class="reasons-columns__descrip-block descrip">
+                <h3 class="reasons-columns__title title">
+                  Мало туристов
+                </h3>
+
+                <div class="reasons-columns__num num">
+                  — №5 —
+                </div>
+
+                <p class="reasons-columns__text text">
+                  Большинство едет в гранд каньони толпится там
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
       </div>
 
-      <div class="about-sedona__reason-1">
-        <div class="reason reason--blue">
-          <h3 class="reason__title title">
-            НАСТОЯЩИЙ ГОРОДОК
-          </h3>
-          <div class="reason__number">
-            — №1 —
-          </div>
-          <p class="reason__descrip">
-            СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
-          </p>
-        </div>
-        <div class="reason-image-1">
-          <img src="img/photo-city@1x 1.jpg" alt="">
-        </div>
-      </div>
+    </section>
 
-      <div class="about-sedona__recomend-1">
-        <div class="column">
-          <div class="column__image-1">
-            <img src="img/icon-house.svg.svg" alt=" ">
-          </div>
-          <h3 class="column__title title">
-            Жилье
-          </h3>
-          <p class="column__text">
-            Рекомендуем пожить в настоящем мотеле, все как в кино!
+    <section class="interest">
+      <div class="interest-block">
+        <div class="block-interest">
+          <h2 class="block-interest__title title">
+            Заинтересовались
+          </h2>
+          <p class="block-interest__text text">
+            Укажите предполагаемые даты поездки, и мы покажем вам лучшиепредложения гостиниц в седоне
           </p>
+          <button class="block-interest__button button">
+            Найти гостиницу
+          </button>
         </div>
-        <div class="column">
-          <div class="column__image-1">
-            <img src="img/icon-burger.svg.svg" alt=" ">
-          </div>
-          <h3 class="column__title title">
-            Еда
-          </h3>
-          <p class="column__text">
-            Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
-          </p>
-        </div>
-        <div class="column">
-          <div class="column__image-1">
-            <img src="img/icon-house.svg.svg" alt="">
-          </div>
-          <h3 class="column__title title">
-            Сувениры
-          </h3>
-          <p class="column__text">
-            Не только китайского, но и местного производства!
-          </p>
-        </div>
-      </div>
 
-      <div class="about-sedona__reason-2">
-        <div class="reason-image-2">
-          <img src="img/photo-bridge@1x 1.jpg" alt="">
-        </div>
-        <div class="reason reason--blue">
-          <h3 class="reason__title title">
-            НАСТОЯЩИЙ ГОРОДОК
-          </h3>
-          <div class="reason__number">
-            — №2 —
-          </div>
-          <p class="reason__descrip">
-            СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
-          </p>
-        </div>
-      </div>
-
-      <div class="about-sedona__other-reasons">
-        <div class="column column--gray">
-          <h3 class="column__title title">
-            НЕБОЛЬШАЯ ПЛОЩАДЬ
-          </h3>
-          <div class="column__number">
-            — №3 —
-          </div>
-          <p class="column__descrip">
-            Все интересные места находятся очень близко
-          </p>
-        </div>
-        <div class="column column--gray">
-          <h3 class="column__title title">
-            КРАСИВАЯ ДОРОГА
-          </h3>
-          <div class="column__number">
-            — №4 —
-          </div>
-          <p class="column__descrip">
-            ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
-          </p>
-        </div>
-        <div class="column column--gray">
-          <h3 class="column__title title">
-            МАЛО ТУРИСТОВ
-          </h3>
-          <div class="column__number">
-            — №5 —
-          </div>
-          <p class="column__descrip">
-            Большинство едет в гранд каньони толпится там
-          </p>
-        </div>
+        <img src="img/map-mobile.jpg.jpg" alt="Map" width="320" height="350">
       </div>
     </section>
 
-    <section class="interested">
-      <h2 class="interested__title title">
-        ЗАИНТЕРЕСОВАЛИСЬ?
-      </h2>
-      <p class="interested__text">
-        Укажите предполагаемые датыпоездки, и мы покажем вам лучшиепредложения гостиниц в седоне
-      </p>
-      <a href="#" class="interested__link">Найти гостиницу</a>
-
-      <div class="interested__map">
-        <img src="img/map-mobile.jpg.jpg" alt="">
-      </div>
-    </section>
   </main>
 
   <footer class="page-footer">
-    <div class="footer-wrapper">
-      <a href="#" class="footer-wrapper__visit">#visitSEDONA</a>
+    <div class="page-footer__wrapper footer-wrapper">
+      <a href="#" class="footer-wrapper__visit link-visit">#visitSEDONA</a>
       <ul class="list-social">
         <li class="list-social__item">
-          <a href="" class="list-social__link" style="background-color: gray;">
-            <img src="img/vk.svg" alt="">
+          <a href="" class="list-social__link">
+            <img src="img/vk.svg" alt="Vk">
           </a>
         </li>
         <li class="list-social__item">
-          <a href="" class="list-social__link" style="background-color: gray;">
-            <img src="img/telega.svg" alt="">
+          <a href="" class="list-social__link">
+            <img src="img/telega.svg" alt="Telegram">
           </a>
         </li>
         <li class="list-social__item">
-          <a href="" class="list-social__link" style="background-color: gray;">
-            <img src="img/icon-youtube.svg.svg" alt="">
+          <a href="" class="list-social__link">
+            <img src="img/icon-youtube.svg" alt="Youtube">
           </a>
         </li>
       </ul>
-      <a href="#" class="footer-wrapper__html-academy">
-        <span>Разработано</span>
-        <img src="img/htmlacademy.svg.svg" alt="" width="27" height="34">
+      <a href="#" class="footer-wrapper__html-academy link-html-academy">
+        <span class="link-html-academy__link">Разработано</span>
+        <img src="img/html-academy.svg" alt="" width="27" height="34">
       </a>
     </div>
   </footer>
