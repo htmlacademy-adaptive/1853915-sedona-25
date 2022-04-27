@@ -10,23 +10,27 @@
 <body class="page__body">
 
   <header class="main-header">
+    <div class="main-header__wrapper">
+      <a href="index.html" class="main-header__logo main-header__logo--visible">
+        <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
+      </a>
 
-    <a href="index.html" class="main-header__logo">
-      <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
-    </a>
-
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть</span>
-      </button>
-
-      <div class="main-nav__wrapper">
+      <nav class="main-header__nav main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть</span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Главная</a>
+            <a href="#" class="main-nav__link main-nav__link--current">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link main-nav__link--current">Фото и видео</a>
+          <li class="main-nav__item main-nav__item-second">
+            <a href="#" class="main-nav__link">Фото и видео</a>
+          </li>
+          <li class="main-nav__item main-nav__item--invisible">
+            <a href="#" class="main-nav__link">
+              <img src="img/logo.png" class="main-header__logo-image-list " alt="CITY OF SEDONA" width="185"
+                height="96">
+            </a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Форма Отзыва</a>
@@ -35,13 +39,17 @@
             <a href="#" class="main-nav__link">HTML ACADEMY</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
-    <section class="main-container__picture sedona-picture">
-      <img src="img/catalog/text-sedona.svg" alt="SEDONA" width="229" height="39">
-      <img src="img/intro-triangle.svg" class="sedona-picture__triangle" alt="">
+    <section class="main-container__welcome-sedona welcome-sedona">
+      <div class="welcome-sedona__wrapper">
+        <div class="welcome-sedona__image">
+          <img src="img/catalog/sedona-catalog.svg" class="welcome-sedona__text-index-mobile" alt="Theme" width="282" height="214">
+        </div>
+        <img src="img/intro-triangle.svg" class="welcome-sedona__tri" alt="">
+      </div>
     </section>
 
     <section class="main-container__photos-videos photos-videos">
@@ -56,8 +64,10 @@
 
       <div class="photos-videos__photos">
         <ul class="photos-list">
-          <li class="photos-list__item">
-            <img src="img/catalog/photos/photo-1-mobile.jpg" class="photos-list__image" alt="" width="280" height="280">
+          <li class="photos-list__item photos-list-place">
+            <div class="photos-list__image-block">
+              <img src="img/catalog/photos/photo-1-mobile.jpg" class="photos-list__image-place" alt="" width="280" height="280">
+            </div>
             <h3 class="photos-list__title title-photos">
               Неродные просторы
             </h3>
@@ -65,11 +75,13 @@
               Автор фото: Борис
             </p>
             <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              <button class="likes-total__button">
+                <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              </button>
               <span class="likes-total__kol">1350</span>
             </div>
           </li>
-          <li class="photos-list__item">
+          <li class="photos-list__item photos-list-flowers">
             <img src="img/catalog/photos/photo-2-mobile.jpg" class="photos-list__image" alt="" width="280" height="280">
             <h3 class="photos-list__title title-photos">
               Местная растительность
@@ -78,11 +90,13 @@
               Автор фото: Сергей
             </p>
             <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              <button class="likes-total__button">
+                <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              </button>
               <span class="likes-total__kol">143</span>
             </div>
           </li>
-          <li class="photos-list__item">
+          <li class="photos-list__item photos-list-north">
             <img src="img/catalog/photos/photo-3-mobile.jpg" class="photos-list__image" alt="" width="280" height="280">
             <h3 class="photos-list__title title-photos">
               Дорога на север
@@ -91,11 +105,13 @@
               Автор фото: Петр
             </p>
             <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              <button class="likes-total__button">
+                <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              </button>
               <span class="likes-total__kol">96</span>
             </div>
           </li>
-          <li class="photos-list__item">
+          <li class="photos-list__item photos-list-chert">
             <img src="img/catalog/photos/photo-4.jpg" class="photos-list__image" alt="" width="280" height="280">
             <h3 class="photos-list__title title-photos">
               Мост Дьявола
@@ -104,7 +120,9 @@
               Автор фото: Антон
             </p>
             <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              <button class="likes-total__button">
+                <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+              </button>
               <span class="likes-total__kol">254</span>
             </div>
           </li>
@@ -115,7 +133,7 @@
     <section class="main-container__doubt doubt">
       <div class="block-doubt">
         <h2 class="block-doubt__title title">
-          Заинтересовались
+          Заинтересовались?
         </h2>
         <p class="block-doubt__text text">
           Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
@@ -129,30 +147,28 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper footer-wrapper">
-      <a href="#" class="footer-wrapper__visit link-visit">#visitSEDONA</a>
-      <ul class="page-footer__list-social list-social">
-        <li class="list-social__item">
-          <a href="" class="list-social__link">
-            <img src="img/vk.svg" alt="Vk">
-          </a>
-        </li>
-        <li class="list-social__item">
-          <a href="" class="list-social__link">
-            <img src="img/telega.svg" alt="Telegram">
-          </a>
-        </li>
-        <li class="list-social__item">
-          <a href="" class="list-social__link">
-            <img src="img/icon-youtube.svg" alt="Youtube">
-          </a>
-        </li>
-      </ul>
-      <a href="#" class="footer-wrapper__html-academy link-html-academy">
-        <span>Разработано</span>
-        <img src="img/html-academy.svg" alt="" width="27" height="34">
-      </a>
-    </div>
+    <a href="#" class="page-footer__visit link-visit">#visitSEDONA</a>
+    <ul class="list-social">
+      <li class="list-social__item">
+        <a href="" class="list-social__link">
+          <img src="img/vk.svg" alt="Vk">
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="" class="list-social__link">
+          <img src="img/telega.svg" alt="Telegram">
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="" class="list-social__link">
+          <img src="img/icon-youtube.svg" alt="Youtube">
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="page-footer__html-academy link-html-academy">
+      <span class="link-html-academy__link">Разработано</span>
+      <img src="img/html-academy.svg" alt="" width="27" height="34">
+    </a>
   </footer>
 </body>
 

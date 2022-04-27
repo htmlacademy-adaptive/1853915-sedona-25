@@ -1,42 +1,115 @@
+@white: #ffffff;
+@brown: #766357;
+@tablet-width: 768px;
+@desktop-width: 1280px;
+
+.main-nav__list {
+  display: none;
+}
+
 .main-nav {
   @media (min-width: @tablet-width) {
-    .main-nav__item--invisible {
-      display: block;
-    }
-
     .main-nav__list {
       position: relative;
       visibility: visible;
       width: 768px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       margin: 0 auto;
       text-align: center;
     }
-
 
     .main-nav__item {
       width: 153px;
     }
 
+    .main-nav__item-second {
+      margin-right: 180px;
+    }
+
     .main-nav__toggle {
       display: none;
     }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+
+    &__link {
+      color: #000000;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .main-nav__link {
+      display: block;
+      padding-top: 18px;
+      padding-bottom: 17px;
+    }
+
+    .main-nav__item--invisible {
+      display: block;
+      position: absolute;
+      left: 40%;
+      z-index: 3;
+      padding-top: 27px;
+    }
   }
 
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    visibility: hidden;
-    position: absolute;
-  }
+  @media (min-width: @desktop-width) {
+    .main-nav__list {
+      position: relative;
+      visibility: visible;
+      width: 1200px;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-  &__link {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
+    .main-nav__item {
+      width: 240px;
+    }
+
+    .main-nav__item-second {
+      margin-right: 340px;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+
+    &__link {
+      color: #000000;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .main-nav__link {
+      display: block;
+      padding-top: 18px;
+      padding-bottom: 17px;
+    }
+
+    .main-nav__item--invisible {
+      display: block;
+      position: absolute;
+      left: 40%;
+      z-index: 3;
+      padding-top: 27px;
+    }
   }
 }
 

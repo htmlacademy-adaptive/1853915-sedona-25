@@ -25,7 +25,7 @@
           <li class="main-nav__item">
             <a href="#" class="main-nav__link main-nav__link--current">Главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item-second">
             <a href="#" class="main-nav__link">Фото и видео</a>
           </li>
           <li class="main-nav__item main-nav__item--invisible">
@@ -47,9 +47,12 @@
   <main class="main-container">
     <section class="main-container__welcome-sedona welcome-sedona">
       <div class="welcome-sedona__wrapper">
-        <div class="welcome-sedona__image">
-          <img src="img/text-index.svg" alt="Theme" width="282" height="214">
-        </div>
+        <picture class="welcome-sedona__image">
+          <source media="(min-width: 1280px)" srcset="img/text-index-tablet.svg">
+          <source media="(min-width: 768px)" srcset="img/text-index-tablet.svg">
+
+          <img src="img/text-index.svg" class="welcome-sedona__text-index-mobile" alt="Theme">
+        </picture>
         <img src="img/intro-triangle.svg" class="welcome-sedona__tri" alt="">
       </div>
     </section>
@@ -78,54 +81,42 @@
               </p>
             </div>
           </div>
-          <div class="first-reason__image">
-            <img src="img/photo-city@1x 1.jpg" alt="Photo-city" width="320" height="260" class="photo-city">
-          </div>
+          <picture class="first-reason__image">
+            <source media="(min-width: 1280px)" srcset="img/photo-city-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg">
+
+            <img src="img/photo-city-mobile.jpg" alt="Photo-city" class="photo-city">
+          </picture>
         </div>
         <!-- 2 -->
         <div class="include-sedona">
           <ul class="include-row-advantages">
             <li class="include-row-advantages__column-advantages column-advantages">
-              <div class="include-row-advantages__wrapper">
-                <div class="include-row-advantages__house-title">
-                  <div class="include-row-advantages__image">
-                    <img src="img/icon-house.svg" alt="House" width="40" height="40">
-                  </div>
-                  <h3 class="include-row-advantages__title title">
-                    Жилье
-                  </h3>
-                </div>
-                <p class="include-row-advantages__text-1 text">
+              <div class="include-row-advantages__wrapper-house">
+                <h3 class="include-row-advantages__title-house title">
+                  Жилье
+                </h3>
+                <p class="include-row-advantages__text-house text">
                   Рекомендуем пожить в настоящем мотеле, все как в кино!
                 </p>
               </div>
             </li>
             <li class="include-row-advantages__column-advantages column-advantages">
-              <div class="include-row-advantages__wrapper">
-                <div class="include-row-advantages__food-title">
-                  <div class="include-row-advantages__image">
-                    <img src="img/icon-burger.svg" alt="Food" width="40" height="40">
-                  </div>
-                  <h3 class="include-row-advantages__title title">
-                    Еда
-                  </h3>
-                </div>
-                <p class="include-row-advantages__text-2 text">
+              <div class="include-row-advantages__wrapper-food">
+                <h3 class="include-row-advantages__title-food title">
+                  Еда
+                </h3>
+                <p class="include-row-advantages__text-food text">
                   Всегда заказывайте фирменный бургер, Вы НЕ разочаруетесь!
                 </p>
               </div>
             </li>
             <li class="include-row-advantages__column-advantages column-advantages">
-              <div class="include-row-advantages__wrapper">
-                <div class="include-row-advantages__souvenir-title">
-                  <div class="include-row-advantages__image">
-                    <img src="img/icon-gift.svg" alt="Gifts" width="40" height="40">
-                  </div>
-                  <h3 class="include-row-advantages__title title">
-                    Сувениры
-                  </h3>
-                </div>
-                <p class="include-row-advantages__text-3 text">
+              <div class="include-row-advantages__wrapper-souvenir">
+                <h3 class="include-row-advantages__title-souvenir title">
+                  Сувениры
+                </h3>
+                <p class="include-row-advantages__text-souvenir text">
                   Не только китайского, но и местного производства!
                 </p>
               </div>
@@ -134,9 +125,12 @@
         </div>
         <!-- 3 -->
         <div class="second-reason">
-          <div class="second-reason__image">
-            <img src="img/photo-bridge@1x 1.jpg" class="photo-bridge" alt="Photot-bridge" width="320" height="260">
-          </div>
+          <picture class="second-reason__image">
+            <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg">
+
+            <img src="img/photo-bridge-mobile.jpg" alt="Photo-city" class="photo-city">
+          </picture>
           <div class="second-reason__descrip second-reason__descrip--blue">
             <div class="second-reason__descrip-block descrip">
               <h3 class="second-reason__title title">
@@ -153,47 +147,47 @@
         </div>
         <!-- 4 -->
         <div class="other-reasons">
-          <div class="reasons-columns">
-            <div class="reasons-columns__descrip reasons-columns__descrip--gray">
-              <div class="reasons-columns__descrip-block descrip">
+          <ul class="reasons-columns">
+            <li class="reasons-columns__descrip reasons-columns__descrip--gray">
+              <div class="reasons-columns__descrip-block-place descrip">
                 <h3 class="reasons-columns__title title">
                   Небольшая площадь
                 </h3>
-                <div class="reasons-columns__num num">
+                <span class="reasons-columns__num num">
                   — №3 —
-                </div>
+                </span>
                 <p class="reasons-columns__text text">
                   Все интересные места находятся очень близко
                 </p>
               </div>
-            </div>
-            <div class="reasons-columns__descrip reasons-columns__descrip--gray">
-              <div class="reasons-columns__descrip-block descrip">
+            </li>
+            <li class="reasons-columns__descrip reasons-columns__descrip--gray">
+              <div class="reasons-columns__descrip-block-road descrip">
                 <h3 class="reasons-columns__title title">
                   Красивая дорога
                 </h3>
-                <div class="reasons-columns__num num">
+                <span class="reasons-columns__num num">
                   — №4 —
-                </div>
+                </span>
                 <p class="reasons-columns__text text">
                   Ехать в Седону из Лас-Вегаса совсем не скучно!
                 </p>
               </div>
-            </div>
-            <div class="reasons-columns__descrip reasons-columns__descrip--gray">
-              <div class="reasons-columns__descrip-block descrip">
+            </li>
+            <li class="reasons-columns__descrip reasons-columns__descrip--gray">
+              <div class="reasons-columns__descrip-block-tourists descrip">
                 <h3 class="reasons-columns__title title">
                   Мало туристов
                 </h3>
-                <div class="reasons-columns__num num">
+                <span class="reasons-columns__num num">
                   — №5 —
-                </div>
+                </span>
                 <p class="reasons-columns__text text">
                   Большинство едет в гранд каньони толпится там
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -211,9 +205,12 @@
           </button>
         </div>
 
-        <div class="interest-block__image">
-          <img src="img/map-mobile.jpg.jpg" class="interest-block__map" alt="Map" width="320" height="350">
-        </div>
+        <picture class="interest-block__image">
+          <source media="(min-width: 1280px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+
+          <img src="img/map-mobile.jpg" class="interest-block__map" alt="Map" >
+        </picture>
       </div>
     </section>
   </main>
@@ -242,4 +239,5 @@
     </a>
   </footer>
 </body>
+
 </html>
