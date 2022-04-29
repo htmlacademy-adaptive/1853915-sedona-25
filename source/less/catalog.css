@@ -1,4 +1,5 @@
 .main-header__wrapper {
+  position: relative;
   width: 320px;
   display: flex;
   align-items: center;
@@ -6,9 +7,34 @@
   flex-direction: row;
   justify-content: center;
 }
+.main-header__wrapper .main-header__nav {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-left: 245px;
+}
+.main-header__wrapper .main-header__logo {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
 @media (min-width: 768px) {
   .main-header__wrapper .main-header__logo {
     display: none;
+  }
+  .main-header__wrapper .main-header__nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .main-header__wrapper .main-header__logo {
+    display: none;
+  }
+  .main-header__wrapper .main-header__nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
   }
 }
 .main-nav__toggle {
@@ -210,8 +236,14 @@
   display: block;
 }
 .visually-hidden {
-  visibility: hidden;
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .welcome-sedona {
   width: 320px;
@@ -248,45 +280,42 @@
 }
 @media (min-width: 768px) {
   .welcome-sedona__wrapper {
-    background: url("/img/back-tablet.jpg") no-repeat;
+    background: url("/img/catalog/back-tablet-catalog.jpg") no-repeat;
     width: 768px;
-    height: 512px;
+    height: 345px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+  }
+  .welcome-sedona__wrapper .welcome-sedona__image {
+    position: absolute;
+    left: 20%;
+    top: 45%;
   }
 }
 @media (min-width: 1280px) {
   .welcome-sedona__wrapper {
-    background: url("/img/back-desktop.jpg") no-repeat;
+    background: url("/img/catalog/back-desktop-catalog.jpg") no-repeat;
     width: 1200px;
-    height: 512px;
+    height: 345px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
   }
+  .welcome-sedona__wrapper .welcome-sedona__image {
+    position: absolute;
+    left: 31%;
+    top: 45%;
+  }
 }
 .welcome-sedona__tri {
+  display: flex;
   position: absolute;
-  bottom: 0;
-}
-@media (min-width: 768px) {
-  .welcome-sedona__tri {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .welcome-sedona__image {
-    background: url("/img/text-index-tablet.svg") no-repeat;
-    width: 461px;
-    height: 350px;
-    position: absolute;
-    box-sizing: border-box;
-  }
+  bottom: -2px;
 }
 .photos-list {
   list-style: none;
@@ -296,13 +325,21 @@
   flex-direction: column;
   row-gap: 24px;
 }
-@media (min-width: 768px) {
-  .photos-list {
-    width: 648px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-areas: "place place" "flowers north" "chert .";
-  }
+.photos-list .photos-list__item {
+  padding-bottom: 29px;
+  position: relative;
+}
+.photos-list .photos-list__title {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.photos-list .photos-list__author {
+  padding-bottom: 16px;
+}
+.photos-list .descrip-block__likes-total {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
 }
 .photos-list .photos-list-place {
   grid-area: place;
@@ -320,24 +357,104 @@
   content: "";
   position: relative;
 }
-.photos-list .photos-list__image-place {
-  display: none;
+@media (min-width: 768px) {
+  .photos-list {
+    width: 648px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "place place" "flowers north" "chert .";
+    row-gap: 0;
+  }
+  .photos-list .photos-list__image-block {
+    display: flex;
+  }
+  .photos-list .photos-list__item {
+    padding-bottom: 0;
+  }
+  .photos-list .photos-list__title {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+  .photos-list .photos-list__author {
+    padding: 0;
+  }
+  .photos-list .photos-list__descrip-block {
+    display: flex;
+    background-color: #f2f2f2;
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
+  .photos-list .descrip-block__likes-total {
+    column-gap: 9px;
+  }
 }
-.photos-list .photos-list__image-block {
-  background: url("/img/catalog/photo-1-tablet.jpg") no-repeat;
-  width: 648px;
-  height: 400px;
-  position: relative;
+@media (min-width: 1280px) {
+  .photos-list {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "place place place" "flowers north chert";
+    row-gap: 0;
+  }
+  .photos-list .photos-list__image-block {
+    display: flex;
+  }
+  .photos-list .photos-list__item {
+    padding-bottom: 0;
+    position: relative;
+  }
+  .photos-list .photos-list__title {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+  .photos-list .photos-list__author {
+    padding: 0;
+    color: #ffffff;
+  }
+  .photos-list .photos-list__descrip-block {
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    color: #ffffff;
+  }
+  .photos-list .descrip-block-1 {
+    width: 1200px;
+    box-sizing: border-box;
+  }
+  .photos-list .descrip-block {
+    width: 400px;
+    box-sizing: border-box;
+  }
+  .photos-list .descrip-block__likes-total {
+    column-gap: 9px;
+  }
 }
-.photos-videos {
+.main-container__photos-videos {
   width: 320px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .photos-videos {
+  .main-container__photos-videos {
     width: 648px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1280px) {
+  .main-container__photos-videos {
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -355,24 +472,12 @@
   margin: 0;
   text-transform: uppercase;
 }
-.photos-list__title {
-  padding-top: 15px;
-  padding-bottom: 5px;
-}
 .text-author {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #333333;
   margin: 0;
-}
-.photos-list__author {
-  padding-bottom: 16px;
-}
-.photos-list__likes-total {
-  display: flex;
-  align-items: center;
-  column-gap: 14px;
 }
 .likes-total__button {
   color: inherit;
@@ -382,10 +487,6 @@
   border: none;
   padding: 0;
   display: block;
-}
-.photos-list__item {
-  padding-bottom: 29px;
-  position: relative;
 }
 .photos-list__item::after {
   content: "";
@@ -411,21 +512,72 @@
 .photos-videos__header .photos-videos__text {
   width: 280px;
   margin: 0 auto;
+  font-size: 14px;
 }
-.main-container__doubt {
-  width: 320px;
-  margin: 0 auto;
-  padding-top: 17px;
-  padding-bottom: 29px;
+@media (min-width: 768px) {
+  .photos-videos__header {
+    width: 458px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    text-align: center;
+  }
+  .photos-videos__header .photos-videos__title {
+    margin: 0 auto;
+    margin-bottom: 35px;
+    font-size: 30px;
+  }
+  .photos-videos__header .photos-videos__text {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 .block-doubt {
-  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 29px;
+}
+.block-doubt .block-doubt__header {
   width: 266px;
   margin: 0 auto;
+  text-align: center;
 }
-.block-doubt__title {
-  margin-bottom: 35px;
+.block-doubt .block-doubt__title {
+  font-size: 18px;
+  padding-bottom: 36px;
 }
-.block-doubt__text {
-  margin-bottom: 38px;
+.block-doubt .block-doubt__text {
+  padding-bottom: 43px;
+}
+@media (min-width: 768px) {
+  .block-doubt {
+    width: 648px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 76px;
+  }
+  .block-doubt .block-doubt__header {
+    width: 445px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .block-doubt .block-doubt__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .block-doubt {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 76px;
+  }
+  .block-doubt .block-doubt__header {
+    width: 445px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .block-doubt .block-doubt__title {
+    font-size: 30px;
+  }
 }

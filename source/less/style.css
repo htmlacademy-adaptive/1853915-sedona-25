@@ -1,41 +1,13 @@
-.main-header__wrapper {
-  position: relative;
-  width: 320px;
-  display: flex;
-  align-items: center;
+.main-header {
+  max-width: 320px;
   margin: 0 auto;
-  flex-direction: row;
-  justify-content: center;
+  display: flex;
+  position: relative;
+  height: 56px;
 }
-.main-header__wrapper .main-header__nav {
-  padding-top: 17px;
-  padding-bottom: 17px;
-  margin-left: 245px;
-}
-.main-header__wrapper .main-header__logo {
+.main-header__logo {
   position: absolute;
-  z-index: 5;
-  top: 0;
-}
-@media (min-width: 768px) {
-  .main-header__wrapper .main-header__logo {
-    display: none;
-  }
-  .main-header__wrapper .main-header__nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 0;
-  }
-}
-@media (min-width: 1280px) {
-  .main-header__wrapper .main-header__logo {
-    display: none;
-  }
-  .main-header__wrapper .main-header__nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 0;
-  }
+  z-index: 4;
 }
 .main-nav__toggle {
   background: none;
@@ -51,98 +23,21 @@
   height: 22px;
 }
 .main-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: none;
 }
-@media (min-width: 768px) {
-  .main-nav .main-nav__list {
-    position: relative;
-    visibility: visible;
-    width: 768px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .main-nav .main-nav__item {
-    width: 153px;
-  }
-  .main-nav .main-nav__item-second {
-    margin-right: 180px;
-  }
-  .main-nav .main-nav__toggle {
-    display: none;
-  }
-  .main-nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    visibility: hidden;
-    position: absolute;
-  }
-  .main-nav__link {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .main-nav .main-nav__link {
-    display: block;
-    padding-top: 18px;
-    padding-bottom: 17px;
-  }
-  .main-nav .main-nav__item--invisible {
-    display: block;
-    position: absolute;
-    left: 40%;
-    z-index: 3;
-    padding-top: 27px;
-  }
+.main-nav__list .main-nav__link {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-@media (min-width: 1280px) {
-  .main-nav .main-nav__list {
-    position: relative;
-    visibility: visible;
-    width: 1200px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .main-nav .main-nav__item {
-    width: 240px;
-  }
-  .main-nav .main-nav__item-second {
-    margin-right: 340px;
-  }
-  .main-nav .main-nav__toggle {
-    display: none;
-  }
-  .main-nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    visibility: hidden;
-    position: absolute;
-  }
-  .main-nav__link {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .main-nav .main-nav__link {
-    display: block;
-    padding-top: 18px;
-    padding-bottom: 17px;
-  }
-  .main-nav .main-nav__item--invisible {
-    display: block;
-    position: absolute;
-    left: 40%;
-    z-index: 3;
-    padding-top: 27px;
-  }
-}
-.main-nav__item--invisible {
-  display: none;
+.main-header__nav {
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  right: 0;
 }
 .page-footer {
   width: 320px;
@@ -218,6 +113,7 @@ img {
   font-size: 14px;
   min-height: 100%;
   margin: 0;
+  position: relative;
 }
 .title {
   font-weight: 700;
@@ -240,8 +136,14 @@ img {
   display: block;
 }
 .visually-hidden {
-  visibility: hidden;
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .welcome-sedona {
   width: 320px;
