@@ -118,11 +118,20 @@ img {
 }
 
 .welcome-sedona__tri {
+  display: flex;
   position: absolute;
   bottom: 0;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    display: flex;
+    position: absolute;
+    bottom: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    position: absolute;
+    bottom: -3px;
   }
 }
 

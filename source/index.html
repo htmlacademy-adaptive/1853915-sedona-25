@@ -53,7 +53,12 @@
 
           <img src="img/text-index.svg" class="welcome-sedona__text-index-mobile" alt="Theme">
         </picture>
-        <img src="img/intro-triangle.svg" class="welcome-sedona__tri" alt="">
+        <picture class="welcome-sedona__tri">
+          <source media="(min-width: 1280px)" srcset="img/catalog/intro-triangle-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/catalog/intro-triangle-tablet.svg">
+
+          <img src="img/intro-triangle.svg" alt="" class="triangle">
+        </picture>
       </div>
     </section>
     <section class="about-sedona">
