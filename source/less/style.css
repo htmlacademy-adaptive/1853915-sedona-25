@@ -316,7 +316,7 @@ img {
   .welcome-sedona__tri {
     display: flex;
     position: absolute;
-    bottom: -1.5px;
+    bottom: -1px;
   }
 }
 @media (min-width: 1280px) {
