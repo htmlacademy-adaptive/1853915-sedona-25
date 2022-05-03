@@ -4,29 +4,36 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="less/catalog.css">
 </head>
 
 <body class="page__body">
 
   <header class="main-header">
+    <div class="main-header__wrapper">
+      <a href="index.html" class="main-header__logo main-header__logo--visible">
+        <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
+      </a>
 
-    <a href="index.html" class="main-header__logo">
-      <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
-    </a>
-
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть</span>
-      </button>
-
-      <div class="main-nav__wrapper">
+      <nav class="main-header__nav main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть</span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Главная</a>
+            <a href="#" class="main-nav__link main-nav__link--current">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link main-nav__link--current">Фото и видео</a>
+          <li class="main-nav__item main-nav__item-second">
+            <a href="#" class="main-nav__link">Фото и видео</a>
+          </li>
+          <li class="main-nav__item main-nav__item--invisible">
+            <a href="#" class="main-nav__link">
+              <img src="img/logo.png" class="main-header__logo-image-list " alt="CITY OF SEDONA" width="185"
+                height="96">
+            </a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Форма Отзыва</a>
@@ -35,13 +42,25 @@
             <a href="#" class="main-nav__link">HTML ACADEMY</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
-    <section class="main-container__picture sedona-picture">
-      <img src="img/catalog/text-sedona.svg" alt="SEDONA" width="229" height="39">
-      <img src="img/intro-triangle.svg" class="sedona-picture__triangle" alt="">
+    <section class="main-container__welcome-sedona welcome-sedona">
+      <div class="welcome-sedona__wrapper">
+        <picture class="welcome-sedona__image">
+          <source media="(min-width: 1280px)" srcset="img/catalog/text-sedona.svg">
+          <source media="(min-width: 768px)" srcset="img/catalog/text-sedona.svg">
+
+          <img src="img/catalog/text-sedona-mobile.svg" class="welcome-sedona__text-index-mobile" alt="Theme">
+        </picture>
+        <picture class="welcome-sedona__tri">
+          <source media="(min-width: 1280px)" srcset="img/catalog/intro-triangle-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/catalog/intro-triangle-tablet.svg">
+
+          <img src="img/intro-triangle.svg" alt="" class="triangle">
+        </picture>
+      </div>
     </section>
 
     <section class="main-container__photos-videos photos-videos">
@@ -56,56 +75,122 @@
 
       <div class="photos-videos__photos">
         <ul class="photos-list">
-          <li class="photos-list__item">
-            <img src="img/catalog/photos/photo-1-mobile.jpg" class="photos-list__image" alt="" width="280" height="280">
-            <h3 class="photos-list__title title-photos">
-              Неродные просторы
-            </h3>
-            <p class="photos-list__author text-author">
-              Автор фото: Борис
-            </p>
-            <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
-              <span class="likes-total__kol">1350</span>
+          <li class="photos-list__item photos-list-place">
+            <picture class="photos-list__image-block">
+              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-1-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-1-tablet.jpg">
+
+              <img src="img/catalog/photos/photo-1-mobile.jpg" class="photos-list__image-place" alt="">
+            </picture>
+
+            <div class="photos-list__descrip-block descrip-block-1">
+              <div class="descrip-block__name">
+                <h3 class="photos-list__title title-photos">
+                  Неродные просторы
+                </h3>
+                <p class="photos-list__author text-author">
+                  Автор фото: Борис
+                </p>
+              </div>
+              <div class="descrip-block__likes-total likes-total">
+                <button class="likes-total__button">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/catalog/like-icon-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/catalog/like-icon.svg">
+
+                    <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+                  </picture>
+                </button>
+                <span class="likes-total__kol">1350</span>
+              </div>
+            </div>
+
+          </li>
+          <li class="photos-list__item photos-list-flowers">
+            <picture class="photos-list__image-block">
+              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-2-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-2-tablet.jpg">
+
+              <img src="img/catalog/photos/photo-2-mobile.jpg" class="photos-list__image-place" alt="">
+            </picture>
+            <div class="photos-list__descrip-block descrip-block">
+              <div class="descrip-block__name">
+                <h3 class="photos-list__title title-photos">
+                  Местная растительность
+                </h3>
+                <p class="photos-list__author text-author">
+                  Автор фото: Сергей
+                </p>
+              </div>
+              <div class="descrip-block__likes-total likes-total">
+                <button class="likes-total__button">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/catalog/like-icon-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/catalog/like-icon.svg">
+
+                    <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+                  </picture>
+                </button>
+                <span class="likes-total__kol">143</span>
+              </div>
             </div>
           </li>
-          <li class="photos-list__item">
-            <img src="img/catalog/photos/photo-2-mobile.jpg" class="photos-list__image" alt="" width="280" height="280">
-            <h3 class="photos-list__title title-photos">
-              Местная растительность
-            </h3>
-            <p class="photos-list__author text-author">
-              Автор фото: Сергей
-            </p>
-            <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
-              <span class="likes-total__kol">143</span>
+          <li class="photos-list__item photos-list-north">
+            <picture class="photos-list__image-block">
+              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-3-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-3-tablet.jpg">
+
+              <img src="img/catalog/photos/photo-3-mobile.jpg" class="photos-list__image-place" alt="">
+            </picture>
+            <div class="photos-list__descrip-block descrip-block">
+              <div class="descrip-block__name">
+                <h3 class="photos-list__title title-photos">
+                  Дорога на север
+                </h3>
+                <p class="photos-list__author text-author">
+                  Автор фото: Петр
+                </p>
+              </div>
+              <div class="descrip-block__likes-total likes-total">
+                <button class="likes-total__button">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/catalog/like-icon-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/catalog/like-icon.svg">
+
+                    <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+                  </picture>
+                </button>
+                <span class="likes-total__kol">96</span>
+              </div>
             </div>
           </li>
-          <li class="photos-list__item">
-            <img src="img/catalog/photos/photo-3-mobile.jpg" class="photos-list__image" alt="" width="280" height="280">
-            <h3 class="photos-list__title title-photos">
-              Дорога на север
-            </h3>
-            <p class="photos-list__author text-author">
-              Автор фото: Петр
-            </p>
-            <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
-              <span class="likes-total__kol">96</span>
-            </div>
-          </li>
-          <li class="photos-list__item">
-            <img src="img/catalog/photos/photo-4.jpg" class="photos-list__image" alt="" width="280" height="280">
-            <h3 class="photos-list__title title-photos">
-              Мост Дьявола
-            </h3>
-            <p class="photos-list__author text-author">
-              Автор фото: Антон
-            </p>
-            <div class="photos-list__likes-total likes-total">
-              <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
-              <span class="likes-total__kol">254</span>
+          <li class="photos-list__item photos-list-chert">
+            <picture class="photos-list__image-block">
+              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-4-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-4-tablet.jpg">
+
+              <img src="img/catalog/photos/photo-4-mobile.jpg" class="photos-list__image-place" alt="">
+            </picture>
+            <div class="photos-list__descrip-block descrip-block">
+              <div class="descrip-block__name">
+                <h3 class="photos-list__title title-photos">
+                  Мост Дьявола
+                </h3>
+                <p class="photos-list__author text-author">
+                  Автор фото: Антон
+                </p>
+              </div>
+              <div class="descrip-block__likes-total likes-total">
+                <button class="likes-total__button">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/catalog/like-icon-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/catalog/like-icon.svg">
+
+                    <img class="likes-total__image" src="img/catalog/like-icon.svg" alt="">
+                  </picture>
+                </button>
+                <span class="likes-total__kol">254</span>
+              </div>
             </div>
           </li>
         </ul>
@@ -113,48 +198,49 @@
     </section>
 
     <section class="main-container__doubt doubt">
-      <div class="doubt-block">
-        <div class="block-doubt">
+      <div class="block-doubt">
+        <header class="block-doubt__header">
           <h2 class="block-doubt__title title">
-            Заинтересовались
+            Всё еще сомневаетесь?
           </h2>
           <p class="block-doubt__text text">
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
+        </header>
 
-          <div class="block-doubt__video">
-            <img src="img/catalog/video-mobile.jpg" alt="">
-          </div>
-        </div>
+        <picture class="block-doubt__video">
+          <source media="(min-width: 1280px)" srcset="img/catalog/video-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/catalog/video-tablet.jpg">
+
+          <img src="img/catalog/video-mobile.jpg" alt="">
+        </picture>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper footer-wrapper">
-      <a href="#" class="footer-wrapper__visit link-visit">#visitSEDONA</a>
-      <ul class="page-footer__list-social list-social">
-        <li class="list-social__item">
-          <a href="" class="list-social__link">
-            <img src="img/vk.svg" alt="Vk">
-          </a>
-        </li>
-        <li class="list-social__item">
-          <a href="" class="list-social__link">
-            <img src="img/telega.svg" alt="Telegram">
-          </a>
-        </li>
-        <li class="list-social__item">
-          <a href="" class="list-social__link">
-            <img src="img/icon-youtube.svg" alt="Youtube">
-          </a>
-        </li>
-      </ul>
-      <a href="#" class="footer-wrapper__html-academy link-html-academy">
-        <span>Разработано</span>
-        <img src="img/html-academy.svg" alt="" width="27" height="34">
-      </a>
-    </div>
+    <a href="#" class="page-footer__visit link-visit">#visitSEDONA</a>
+    <ul class="list-social">
+      <li class="list-social__item">
+        <a href="" class="list-social__link">
+          <img src="img/vk.svg" alt="Vk">
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="" class="list-social__link">
+          <img src="img/telega.svg" alt="Telegram">
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="" class="list-social__link">
+          <img src="img/icon-youtube.svg" alt="Youtube">
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="page-footer__html-academy link-html-academy">
+      <span class="link-html-academy__link">Разработано</span>
+      <img src="img/html-academy.svg" alt="" width="27" height="34">
+    </a>
   </footer>
 </body>
 

@@ -2,8 +2,27 @@
 @import url("blocks/header.less");
 @import url("blocks/main-nav.less");
 @import url("blocks/footer.less");
-@import url("blocks/catalog-list.less");
+// @import url("blocks/catalog-list.less");
 
+@white: #ffffff;
+@brown: #766357;
+@gray: #f2f2f2;
+@tablet-width: 768px;
+@desktop-width: 1280px;
+
+.list-none() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button() {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 .page__body {
   font-family: "PT Sans", sans-serif;
@@ -25,6 +44,7 @@
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .button {
@@ -35,65 +55,497 @@
 }
 
 .visually-hidden {
-  visibility: hidden;
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.sedona-picture {
-  background: url('/img/back-desktop.jpg') no-repeat;
+.welcome-sedona {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+.main-container__welcome-sedona {
+  margin-bottom: 32px;
+}
+
+.welcome-sedona__wrapper {
+  background: url("/img/catalog/back-mobile-catalog.jpg") no-repeat;
   width: 320px;
   height: 214px;
-}
-
-.main-container__picture {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    background: url("/img/catalog/back-tablet-catalog.jpg") no-repeat;
+    width: 768px;
+    height: 345px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    .welcome-sedona__image {
+      position: absolute;
+      left: 20%;
+      top: 45%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("/img/catalog/back-desktop-catalog.jpg") no-repeat;
+    width: 1200px;
+    height: 345px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    .welcome-sedona__image {
+      position: absolute;
+      left: 31%;
+      top: 45%;
+    }
+  }
 }
 
-.sedona-picture__triangle {
+.welcome-sedona__tri {
+  display: flex;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -2px;
 }
 
-.main-container__doubt {
-  margin-bottom: 29px;
-}
+.photos-list {
+  .list-none();
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 
-.block-doubt__title {
-  margin-bottom: 38px;
-}
+  .photos-list__item {
+    padding-bottom: 29px;
+    position: relative;
+  }
 
-.block-doubt__text {
-  margin-bottom: 38px;
-  width: 266px;
+  .photos-list__title {
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+
+  .photos-list__author {
+    padding-bottom: 16px;
+  }
+
+  .descrip-block__likes-total {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  .photos-list-place {
+    grid-area: place;
+  }
+
+  .photos-list-flowers {
+    grid-area: flowers;
+  }
+
+  .photos-list-north {
+    grid-area: north;
+  }
+
+  .photos-list-chert {
+    grid-area: chert;
+  }
+
+  .photos-list__item::after {
+    content: "";
+    position: relative;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "place place"
+      "flowers north"
+      "chert .";
+    row-gap: 0;
+
+    .photos-list__image-block {
+      display: flex;
+    }
+
+    .photos-list__item {
+      padding-bottom: 0;
+    }
+
+    .photos-list__title {
+      padding: 0;
+      padding-bottom: 5px;
+    }
+
+    .photos-list__author {
+      padding: 0;
+    }
+
+    .photos-list__descrip-block {
+      display: flex;
+      background-color: @gray;
+      padding-top: 22px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      justify-content: space-between;
+    }
+
+    .descrip-block__likes-total {
+      column-gap: 9px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "place place place"
+      "flowers north chert";
+    row-gap: 0;
+
+    .photos-list__image-block {
+      display: flex;
+    }
+
+    .photos-list__item {
+      padding-bottom: 0;
+      position: relative;
+    }
+
+    .photos-list__title {
+      padding: 0;
+      padding-bottom: 5px;
+    }
+
+    .photos-list__author {
+      padding: 0;
+      color: @white;
+    }
+
+    .photos-list__descrip-block {
+      background: rgba(0, 0, 0, 0.4);
+      padding-top: 22px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      bottom: 0;
+      color: @white;
+    }
+
+    .descrip-block-1 {
+      width: 1200px;
+      box-sizing: border-box;
+    }
+
+    .descrip-block {
+      width: 400px;
+      box-sizing: border-box;
+    }
+
+    .descrip-block__likes-total {
+      column-gap: 9px;
+    }
+  }
+
+  // .photos-list__image-place {
+  //   display: none;
+  // }
+
+  // .photos-list__image-block {
+  //   background: url("/img/catalog/photo-1-tablet.jpg") no-repeat;
+  //   width: 648px;
+  //   height: 400px;
+  //   position: relative;
+  // }
 }
 
 .main-container__photos-videos {
-  margin-bottom: 17px;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 }
+
+.photos-videos__photos {
+  display: flex;
+  justify-content: center;
+}
+
+.title-photos {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.text-author {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+}
+
+.likes-total__button {
+  .button();
+}
+
+.photos-list__item::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background-color: #e5e5e5e5;
+  bottom: 0;
+  left: -20px;
+}
+// .main-container__doubt {
+//   margin-bottom: 29px;
+// }
+
+// .block-doubt__title {
+//   margin-bottom: 38px;
+// }
+
+// .block-doubt__text {
+//   margin-bottom: 38px;
+//   width: 266px;
+// }
+
+// .main-container__photos-videos {
+//   display: flex;
+//   width: 320px;
+//   flex-direction: column;
+
+// }
+// // .photos-videos {
+// //   width: 320px;
+// //   margin: 0 auto;
+
+// //   @media (min-width: @tablet-width) {
+// //     width: 768px;
+// //     margin: 0 auto;
+// //   }
+
+// //   @media (min-width: @desktop-width) {
+// //     width: 1280px;
+// //     margin: 0 auto;
+// //   }
+// // }
 
 .photos-videos__header {
-  margin-bottom: 24px;
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 45px;
+  text-align: center;
+
+  .photos-videos__title {
+    width: 280px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  .photos-videos__text {
+    width: 280px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    text-align: center;
+
+    .photos-videos__title {
+      margin: 0 auto;
+      margin-bottom: 35px;
+      font-size: 30px;
+    }
+
+    .photos-videos__text {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
 }
 
-.photos-videos__title {
-  margin-bottom: 38px;
-}
+// .main-container__doubt {
+//   width: 320px;
+//   margin: 0 auto;
+//   padding-top: 17px;
+//   padding-bottom: 29px;
 
-.photos-list__item {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 24px;
-  width: 320px;
-}
+//   @media (min-width: @tablet-width) {
+//     width: 648px;
+//     margin: 0 auto;
+//     padding-top: 17px;
+//     padding-bottom: 29px;
+//   }
+// }
 
-.photos-videos__text {
-  width: 320px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
+.block-doubt {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 29px;
 
-.photos-list__title {
-  padding-top: 15px;
-  margin-bottom: 15px;
+  .block-doubt__header {
+    width: 266px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .block-doubt__title {
+    font-size: 18px;
+    padding-bottom: 36px;
+  }
+
+  .block-doubt__text {
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 76px;
+
+    .block-doubt__header {
+      width: 445px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .block-doubt__title {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 76px;
+
+    .block-doubt__header {
+      width: 445px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .block-doubt__title {
+      font-size: 30px;
+    }
+  }
 }
+// .main-container__photos-videos {
+//   margin-bottom: 17px;
+// }
+
+// .photos-videos__title {
+//   margin-bottom: 38px;
+// }
+
+// .photos-list__item {
+//   padding-bottom: 25px;
+//   border-bottom: 1px solid #e5e5e5;
+//   margin-bottom: 24px;
+//   width: 320px;
+// }
+
+// .photos-videos__text {
+//   width: 320px;
+//   padding-bottom: 20px;
+//   border-bottom: 1px solid #e5e5e5;
+// }
+
+// .photos-list {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// // // .photos-list__item {
+// // // }
+
+// // // .photos-list__image {
+// // // }
+
+// // // .photos-list__title {
+// // // }
+
+// .photos-list__title {
+//   padding-top: 15px;
+//   margin-bottom: 10px;
+// }
+// // // .photos-list__author {
+// // // }
+
+// // .photos-list__likes-total {
+// // }
+
+// // .likes-total {
+// // }
+
+// // .likes-total__image {
+// // }
+
+// // .likes-total__kol {
+// // }
