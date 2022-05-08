@@ -1,4 +1,23 @@
-.main-header__wrapper {
+.main-header__nav {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-left: 245px;
+}
+@media (min-width: 768px) {
+  .main-header__nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .main-header__nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+}
+.main-header {
   position: relative;
   width: 320px;
   display: flex;
@@ -7,51 +26,87 @@
   flex-direction: row;
   justify-content: center;
 }
-.main-header__wrapper .main-header__nav {
-  padding-top: 17px;
-  padding-bottom: 17px;
-  margin-left: 245px;
-}
-.main-header__wrapper .main-header__logo {
+.main-header .main-header__logo {
   position: absolute;
   z-index: 5;
   top: 0;
 }
 @media (min-width: 768px) {
-  .main-header__wrapper .main-header__logo {
+  .main-header .main-header__logo {
     display: none;
-  }
-  .main-header__wrapper .main-header__nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 0;
   }
 }
 @media (min-width: 1280px) {
-  .main-header__wrapper .main-header__logo {
+  .main-header .main-header__logo {
     display: none;
   }
-  .main-header__wrapper .main-header__nav {
+  .main-header .main-header__nav {
     padding-top: 0;
     padding-bottom: 0;
     margin-left: 0;
   }
 }
-.main-nav__toggle {
+.main-nav__list {
+  display: none;
+}
+.display_menu {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: #81b3d2;
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 223px;
+  top: 0;
+}
+.display_menu .main-nav__item {
+  padding-top: 17px;
+  padding-bottom: 15px;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+}
+.display_menu .main-nav__item .main-nav__link {
+  line-height: 26px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+.display_menu .main-nav__item--shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+.display_menu .main-nav__cross {
+  background: none;
+  border: none;
+  padding: 0;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  cursor: pointer;
+}
+.main-nav .main-nav__toggle {
   background: none;
   border: none;
   cursor: pointer;
   margin: 0;
   padding: 0;
 }
-.main-nav__toggle::before {
+.main-nav .main-nav__toggle::before {
   content: url("../img/icon-menu.svg");
   display: block;
   width: 23px;
   height: 22px;
 }
-.main-nav__list {
+.main-nav .main-nav__item--invisible {
   display: none;
+}
+.main-nav .main-nav__item:hover .main-nav__link {
+  color: #766357;
 }
 @media (min-width: 768px) {
   .main-nav .main-nav__list {
@@ -62,32 +117,26 @@
     align-items: center;
     margin: 0 auto;
     text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   .main-nav .main-nav__item {
     width: 153px;
   }
-  .main-nav .main-nav__item-second {
+  .main-nav .main-nav__item--second {
     margin-right: 180px;
   }
   .main-nav .main-nav__toggle {
     display: none;
   }
-  .main-nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    visibility: hidden;
-    position: absolute;
-  }
-  .main-nav__link {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
   .main-nav .main-nav__link {
     display: block;
     padding-top: 18px;
     padding-bottom: 17px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
   }
   .main-nav .main-nav__item--invisible {
     display: block;
@@ -95,6 +144,9 @@
     left: 40%;
     z-index: 3;
     padding-top: 27px;
+  }
+  .main-nav .main-nav__cross {
+    display: none;
   }
 }
 @media (min-width: 1280px) {
@@ -106,32 +158,26 @@
     align-items: center;
     margin: 0 auto;
     text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   .main-nav .main-nav__item {
     width: 240px;
   }
-  .main-nav .main-nav__item-second {
+  .main-nav .main-nav__item--second {
     margin-right: 340px;
   }
   .main-nav .main-nav__toggle {
     display: none;
   }
-  .main-nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    visibility: hidden;
-    position: absolute;
-  }
-  .main-nav__link {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
   .main-nav .main-nav__link {
     display: block;
     padding-top: 18px;
     padding-bottom: 17px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
   }
   .main-nav .main-nav__item--invisible {
     display: block;
@@ -140,9 +186,9 @@
     z-index: 3;
     padding-top: 27px;
   }
-}
-.main-nav__item--invisible {
-  display: none;
+  .main-nav .main-nav__cross {
+    display: none;
+  }
 }
 .page-footer {
   width: 320px;
@@ -209,12 +255,6 @@
     justify-content: space-between;
   }
 }
-.page__body {
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  min-height: 100%;
-  margin: 0;
-}
 .title {
   font-weight: 700;
   font-size: 18px;
@@ -229,11 +269,20 @@
   text-transform: uppercase;
   margin: 0;
 }
-.button {
-  background: none;
-  border: none;
+.title-photos {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
   padding: 0;
-  display: block;
+  margin: 0;
+  text-transform: uppercase;
+}
+.text-author {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
 }
 .visually-hidden {
   position: absolute;
@@ -245,77 +294,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.welcome-sedona {
-  width: 320px;
-  margin: 0 auto;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .welcome-sedona {
-    width: 768px;
-    margin: 0 auto;
-    text-align: center;
-    box-sizing: border-box;
-  }
-}
-@media (min-width: 1280px) {
-  .welcome-sedona {
-    width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    box-sizing: border-box;
-  }
-}
-.main-container__welcome-sedona {
-  margin-bottom: 32px;
-}
-.welcome-sedona__wrapper {
-  background: url("/img/catalog/back-mobile-catalog.jpg") no-repeat;
-  width: 320px;
-  height: 214px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .welcome-sedona__wrapper {
-    background: url("/img/catalog/back-tablet-catalog.jpg") no-repeat;
-    width: 768px;
-    height: 345px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  .welcome-sedona__wrapper .welcome-sedona__image {
-    position: absolute;
-    left: 20%;
-    top: 45%;
-  }
-}
-@media (min-width: 1280px) {
-  .welcome-sedona__wrapper {
-    background: url("/img/catalog/back-desktop-catalog.jpg") no-repeat;
-    width: 1200px;
-    height: 345px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  .welcome-sedona__wrapper .welcome-sedona__image {
-    position: absolute;
-    left: 31%;
-    top: 45%;
-  }
-}
-.welcome-sedona__tri {
-  display: flex;
-  position: absolute;
-  bottom: -2px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 .photos-list {
   list-style: none;
@@ -340,6 +321,19 @@
   display: flex;
   align-items: center;
   column-gap: 14px;
+}
+.photos-list .descrip-block__likes-total .descrip-block__button {
+  background: none;
+  border: none;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+}
+.photos-list .descrip-block__likes-total .descrip-block__button::before {
+  content: url("../img/catalog/like-icon.svg");
+  display: block;
+  width: 23px;
+  height: 23px;
 }
 .photos-list .photos-list-place {
   grid-area: place;
@@ -380,7 +374,7 @@
   }
   .photos-list .photos-list__descrip-block {
     display: flex;
-    background-color: #f2f2f2;
+    background-color: #eeeeee;
     padding-top: 22px;
     padding-bottom: 15px;
     padding-left: 20px;
@@ -390,10 +384,23 @@
   .photos-list .descrip-block__likes-total {
     column-gap: 9px;
   }
+  .photos-list .descrip-block__likes-total .descrip-block__button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+  }
+  .photos-list .descrip-block__likes-total .descrip-block__button::before {
+    content: url("../img/catalog/like-icon.svg");
+    display: block;
+    width: 23px;
+    height: 23px;
+  }
 }
 @media (min-width: 1280px) {
   .photos-list {
-    width: 1200px;
+    min-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-areas: "place place place" "flowers north chert";
@@ -426,76 +433,30 @@
     bottom: 0;
     color: #ffffff;
   }
-  .photos-list .descrip-block-1 {
-    width: 1200px;
-    box-sizing: border-box;
-  }
   .photos-list .descrip-block {
-    width: 400px;
+    width: 100%;
     box-sizing: border-box;
   }
   .photos-list .descrip-block__likes-total {
     column-gap: 9px;
   }
-}
-.main-container__photos-videos {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .main-container__photos-videos {
-    width: 648px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+  .photos-list .descrip-block__likes-total .descrip-block__button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+  }
+  .photos-list .descrip-block__likes-total .descrip-block__button::before {
+    content: url("../img/catalog/like-icon-desktop.svg");
+    display: block;
+    width: 23px;
+    height: 23px;
   }
 }
-@media (min-width: 1280px) {
-  .main-container__photos-videos {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-}
-.photos-videos__photos {
+.photos-videos .photos-videos__photos {
   display: flex;
   justify-content: center;
-}
-.title-photos {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-}
-.text-author {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #333333;
-  margin: 0;
-}
-.likes-total__button {
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  display: block;
-}
-.photos-list__item::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 1px;
-  background-color: #e5e5e5e5;
-  bottom: 0;
-  left: -20px;
 }
 .photos-videos__header {
   width: 280px;
@@ -580,4 +541,102 @@
   .block-doubt .block-doubt__title {
     font-size: 30px;
   }
+}
+.welcome-sedona {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .welcome-sedona {
+    width: 768px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1280px) {
+  .welcome-sedona {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+.main-container__welcome-sedona {
+  margin-bottom: 32px;
+}
+.welcome-sedona__wrapper {
+  background: url("/img/catalog/back-mobile-catalog.jpg") no-repeat;
+  width: 320px;
+  height: 214px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .welcome-sedona__wrapper {
+    background: url("/img/catalog/back-tablet-catalog.jpg") no-repeat;
+    width: 768px;
+    height: 345px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .welcome-sedona__wrapper .welcome-sedona__image {
+    position: absolute;
+    left: 20%;
+    top: 45%;
+  }
+}
+@media (min-width: 1280px) {
+  .welcome-sedona__wrapper {
+    background: url("/img/catalog/back-desktop-catalog.jpg") no-repeat;
+    width: 1200px;
+    height: 345px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .welcome-sedona__wrapper .welcome-sedona__image {
+    position: absolute;
+    left: 31%;
+    top: 45%;
+  }
+}
+.welcome-sedona__tri {
+  background: url("/img/intro-triangle.svg") no-repeat;
+  width: 320px;
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 768px) {
+  .welcome-sedona__tri {
+    background: url("/img/catalog/intro-triangle-tablet.svg") no-repeat;
+    width: 768px;
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .welcome-sedona__tri {
+    background: url("/img/catalog/intro-triangle-desktop.svg") no-repeat;
+    width: 1200px;
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+.page__body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  min-height: 100%;
+  margin: 0;
 }

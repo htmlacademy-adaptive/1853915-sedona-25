@@ -10,42 +10,46 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="less/style-shrift.css"> -->
+
+  <head>
+    <link rel="icon" href="Favicon/32.svg" type="image/svg+xml">
+  </head>
 </head>
 
 <body class="page__body">
 
-  <header class="main-header">
-    <div class="main-header__wrapper">
-      <a href="index.html" class="main-header__logo main-header__logo--visible">
-        <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
-      </a>
+  <header class="main-header page__main-header">
+    <a href="index.html" class="main-header__logo main-header__logo--visible">
+      <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
+    </a>
 
-      <nav class="main-header__nav main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть</span>
+    <nav class="main-header__nav main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть</span>
+      </button>
+      <ul class="main-nav__list">
+        <button class="main-nav__cross">
+          <img src="img/Mobile/icon-cross.svg" alt="">
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link main-nav__link--current">Главная</a>
-          </li>
-          <li class="main-nav__item main-nav__item-second">
-            <a href="#" class="main-nav__link">Фото и видео</a>
-          </li>
-          <li class="main-nav__item main-nav__item--invisible">
-            <a href="#" class="main-nav__link">
-              <img src="img/logo.png" class="main-header__logo-image-list " alt="CITY OF SEDONA" width="185"
-                height="96">
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Форма Отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">HTML ACADEMY</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <li class="main-nav__item">
+          <a href="index.html" class="main-nav__link main-nav__link--current">Главная</a>
+        </li>
+        <li class="main-nav__item main-nav__item--second">
+          <a href="catalog.html" class="main-nav__link">Фото и видео</a>
+        </li>
+        <li class="main-nav__item main-nav__item--invisible">
+          <a href="#" class="main-nav__link">
+            <img src="img/logo.png" class="main-header__logo-image-list " alt="CITY OF SEDONA" width="185" height="96">
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Форма Отзыва</a>
+        </li>
+        <li class="main-nav__item main-nav__item--shadow">
+          <a href="https://htmlacademy.ru" class="main-nav__link">HTML ACADEMY</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="main-container">
     <section class="main-container__welcome-sedona welcome-sedona">
@@ -56,12 +60,13 @@
 
           <img src="img/text-index.svg" class="welcome-sedona__text-index-mobile" alt="Theme">
         </picture>
-        <picture class="welcome-sedona__tri">
-          <source media="(min-width: 1280px)" srcset="img/catalog/intro-triangle-desktop.svg">
+        <div class="welcome-sedona__tri">
+          <!-- eeee -->
+          <!-- <source media="(min-width: 1280px)" srcset="img/catalog/intro-triangle-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/catalog/intro-triangle-tablet.svg">
 
-          <img src="img/intro-triangle.svg" alt="" class="triangle">
-        </picture>
+          <img src="img/intro-triangle.svg" alt="" class="triangle"> -->
+        </div>
       </div>
     </section>
     <section class="about-sedona">
@@ -208,7 +213,7 @@
           <p class="block-interest__text text">
             Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <button class="block-interest__button button">
+          <button class="block-interest__button">
             Найти гостиницу
           </button>
         </div>
@@ -246,6 +251,9 @@
       <img src="img/html-academy.svg" alt="" width="27" height="34">
     </a>
   </footer>
+
+  <script src="js/index.js">
+  </script>
 </body>
 
 </html>
