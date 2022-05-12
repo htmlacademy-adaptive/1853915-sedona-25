@@ -1,0 +1,74 @@
+.form-info {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 39px;
+  position: relative;
+
+  .form-info__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .form-info__title {
+    width: 238px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-info__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-info__field-label {
+    margin-left: 16px;
+  }
+
+  .tel {
+    position: relative;
+  }
+
+  .form-info__img-tel {
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    background-color: #e6e6e6;
+    bottom: 0;
+    box-sizing: border-box;
+    right: 0;
+    display: flex;
+  }
+
+  .form-info__img-tel::after {
+    content: url("../img/form/phone.svg");
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+  }
+
+  .email {
+    position: relative;
+  }
+
+  .form-info__img-email {
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    background-color: #e6e6e6;
+    bottom: 0;
+    box-sizing: border-box;
+    right: 0;
+    display: flex;
+  }
+
+  .form-info__img-email::after {
+    content: url("../img/form/mail.svg");
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+  }
+}

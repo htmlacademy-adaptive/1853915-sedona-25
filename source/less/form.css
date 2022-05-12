@@ -356,126 +356,6 @@
   min-height: 100%;
   margin: 0;
 }
-.review {
-  width: 320px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .review {
-    width: 768px;
-    margin: 0 auto;
-    padding-top: 32px;
-  }
-}
-@media (min-width: 1280px) {
-  .review {
-    width: 1280px;
-    margin: 0 auto;
-    padding-top: 83px;
-  }
-}
-.review__header {
-  width: 282px;
-  margin: 0 auto;
-  padding-bottom: 28px;
-}
-.review__header .review__title {
-  width: 282px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 35px;
-  font-size: 18px;
-}
-.review__header .review__text-reasons {
-  width: 282px;
-  margin: 0 auto;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .review__header {
-    width: 435px;
-    margin: 0 auto;
-    margin-bottom: 102px;
-    padding-bottom: 0;
-  }
-  .review__header .review__title {
-    width: 317px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 30px;
-  }
-  .review__header .review__text-reasons {
-    width: 435px;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
-@media (min-width: 1280px) {
-  .review__header {
-    width: 483px;
-    margin: 0 auto;
-    margin-bottom: 66px;
-  }
-  .review__header .review__title {
-    width: 483px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 35px;
-    font-size: 21px;
-  }
-  .review__header .review__text-reasons {
-    width: 483px;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
-.title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin: 0;
-}
-.text {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
-}
-.title-photos {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-}
-.text-author {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.paragraph {
-  margin: 0;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
 .input-text {
   width: 100%;
   height: 58px;
@@ -489,6 +369,16 @@ img {
   outline: none;
   padding-left: 16px;
 }
+.input-circle {
+  width: 46px;
+  height: 46px;
+  margin: 0;
+}
+.input-square {
+  width: 46px;
+  height: 46px;
+  margin: 0;
+}
 .form-sedona {
   width: 320px;
   margin: 0 auto;
@@ -496,6 +386,162 @@ img {
   flex-direction: column;
   position: relative;
   padding-top: 24px;
+}
+@media (min-width: 768px) {
+  .form-sedona {
+    width: 648px;
+    margin: 0 auto;
+    display: grid;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 64px;
+    grid-template-areas: "person info" "impression  impression" "visit visit" "emotions emotions";
+    row-gap: 45px;
+  }
+  .form-sedona .span-hidden {
+    font-size: 14px;
+  }
+  .form-sedona .form-person {
+    grid-area: person;
+    width: 280px;
+    padding-bottom: 0;
+  }
+  .form-sedona .form-person .form-person__title {
+    width: 160px;
+    margin-bottom: 28px;
+    font-size: 21px;
+  }
+  .form-sedona .form-person::after {
+    content: "";
+    border-right: 2px solid #eeeeee;
+    position: absolute;
+    height: 338px;
+    left: 315px;
+  }
+  .form-sedona .form-info {
+    grid-area: info;
+    width: 298px;
+    display: flex;
+    margin-left: auto;
+    padding-bottom: 0;
+  }
+  .form-sedona .form-info .form-info__title {
+    width: 278px;
+    margin-bottom: 28px;
+    font-size: 21px;
+  }
+  .form-sedona .form-emotions {
+    grid-area: emotions;
+    width: 648px;
+    padding-bottom: 0;
+  }
+  .form-sedona .form-emotions .form-emotions__block {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 46px;
+  }
+  .form-sedona .form-emotions .form-emotions__title {
+    width: 402px;
+    margin-bottom: 28px;
+    font-size: 21px;
+  }
+  .form-sedona .button-sedona {
+    width: 324px;
+    margin: 0;
+  }
+  .form-sedona .form-visited {
+    grid-area: visit;
+    width: 648px;
+    padding-bottom: 0;
+  }
+  .form-sedona .form-visited .form-visited__block {
+    display: grid;
+    grid-template-columns: repeat(2, 224px);
+    justify-content: center;
+  }
+  .form-sedona .form-visited .form-visited__title {
+    margin-bottom: 28px;
+    width: 308px;
+    font-size: 21px;
+  }
+  .form-sedona .form-impression {
+    grid-area: impression;
+    width: 648px;
+    padding-bottom: 0;
+  }
+  .form-sedona .form-impression .form-impression__block {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    justify-content: center;
+  }
+  .form-sedona .form-impression .form-impression__title {
+    width: 402px;
+    margin-bottom: 28px;
+    font-size: 21px;
+  }
+}
+@media (min-width: 1280px) {
+  .form-sedona {
+    width: 960px;
+    margin: 0 auto;
+    display: grid;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 64px;
+    grid-template-areas: "person info" "impression  impression" "visit visit" "emotions emotions";
+    row-gap: 56px;
+  }
+  .form-sedona .form-person {
+    grid-area: person;
+    width: 430px;
+    padding-bottom: 15px;
+  }
+  .form-sedona .form-person::after {
+    left: 493px;
+  }
+  .form-sedona .form-info {
+    grid-area: info;
+    width: 402px;
+  }
+  .form-sedona .form-impression {
+    grid-area: impression;
+    width: 100%;
+  }
+  .form-sedona .form-impression .form-impression__block {
+    display: grid;
+    grid-template-columns: 280px 280px 250px;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 53px;
+    padding-right: 53px;
+  }
+  .form-sedona .form-impression .form-impression__title {
+    margin-bottom: 45px;
+  }
+  .form-sedona .form-visited {
+    grid-area: visit;
+    width: 100%;
+  }
+  .form-sedona .form-visited .form-visited__block {
+    display: grid;
+    grid-template-columns: 180px 178px 161px 184px;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  .form-sedona .form-visited .form-visited__title {
+    margin-bottom: 59px;
+  }
+  .form-sedona .form-emotions {
+    grid-area: emotions;
+    width: 768px;
+    margin: 0 auto;
+  }
+  .form-sedona .button-sedona {
+    width: 384px;
+  }
 }
 .form-person {
   display: flex;
@@ -612,10 +658,6 @@ img {
   font-size: 18px;
   font-weight: bold;
 }
-.form-impression .input-circle {
-  width: 46px;
-  height: 46px;
-}
 .form-visited {
   display: flex;
   flex-direction: column;
@@ -643,11 +685,6 @@ img {
   font-size: 18px;
   font-weight: bold;
 }
-.form-visited .input-square {
-  width: 46px;
-  height: 46px;
-  margin: 0;
-}
 .form-emotions {
   display: flex;
   flex-direction: column;
@@ -674,6 +711,126 @@ img {
   text-align: center;
   margin-bottom: 20px;
 }
+.review {
+  width: 320px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .review {
+    width: 768px;
+    margin: 0 auto;
+    padding-top: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .review {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 83px;
+  }
+}
+.review__header {
+  width: 282px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+}
+.review__header .review__title {
+  width: 282px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+.review__header .review__text-reasons {
+  width: 282px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .review__header {
+    width: 435px;
+    margin: 0 auto;
+    margin-bottom: 102px;
+    padding-bottom: 0;
+  }
+  .review__header .review__title {
+    width: 317px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .review__header .review__text-reasons {
+    width: 435px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (min-width: 1280px) {
+  .review__header {
+    width: 483px;
+    margin: 0 auto;
+    margin-bottom: 66px;
+  }
+  .review__header .review__title {
+    width: 483px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 30px;
+  }
+  .review__header .review__text-reasons {
+    width: 483px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+.title-photos {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+.text-author {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.paragraph {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 .button-sedona {
   background: none;
   border: none;
@@ -696,160 +853,4 @@ img {
   right: 20px;
   font-size: 12px;
   text-transform: uppercase;
-}
-@media (min-width: 768px) {
-  .form-sedona {
-    width: 648px;
-    margin: 0 auto;
-    display: grid;
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 64px;
-    grid-template-areas: "person info" "impression  impression" "visit visit" "emotions emotions";
-    row-gap: 45px;
-  }
-  .span-hidden {
-    font-size: 14px;
-  }
-  .form-person {
-    grid-area: person;
-    width: 280px;
-    padding-bottom: 0;
-  }
-  .form-person .form-person__title {
-    width: 160px;
-    margin-bottom: 28px;
-    font-size: 21px;
-  }
-  .form-person::after {
-    content: "";
-    border-right: 2px solid #eeeeee;
-    position: absolute;
-    height: 338px;
-    left: 315px;
-  }
-  .form-info {
-    grid-area: info;
-    width: 298px;
-    display: flex;
-    margin-left: auto;
-    padding-bottom: 0;
-  }
-  .form-info .form-info__title {
-    width: 278px;
-    margin-bottom: 28px;
-    font-size: 21px;
-  }
-  .form-emotions {
-    grid-area: emotions;
-    width: 648px;
-    padding-bottom: 0;
-  }
-  .form-emotions .form-emotions__block {
-    width: 100%;
-    height: 160px;
-    margin-bottom: 46px;
-  }
-  .form-emotions .form-emotions__title {
-    width: 402px;
-    margin-bottom: 28px;
-    font-size: 21px;
-  }
-  .button-sedona {
-    width: 324px;
-    margin: 0;
-  }
-  .form-visited {
-    grid-area: visit;
-    width: 648px;
-    padding-bottom: 0;
-  }
-  .form-visited .form-visited__block {
-    display: grid;
-    grid-template-columns: repeat(2, 224px);
-    justify-content: center;
-  }
-  .form-visited .form-visited__title {
-    margin-bottom: 28px;
-    width: 308px;
-    font-size: 21px;
-  }
-  .form-impression {
-    grid-area: impression;
-    width: 648px;
-    padding-bottom: 0;
-  }
-  .form-impression .form-impression__block {
-    display: grid;
-    grid-template-columns: repeat(2, 280px);
-    justify-content: center;
-  }
-  .form-impression .form-impression__title {
-    width: 402px;
-    margin-bottom: 28px;
-    font-size: 21px;
-  }
-}
-@media (min-width: 1280px) {
-  .form-sedona {
-    width: 960px;
-    margin: 0 auto;
-    display: grid;
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 64px;
-    grid-template-areas: "person info" "impression  impression" "visit visit" "emotions emotions";
-    row-gap: 56px;
-  }
-  .form-person {
-    grid-area: person;
-    width: 430px;
-    padding-bottom: 15px;
-  }
-  .form-person::after {
-    left: 493px;
-  }
-  .form-info {
-    grid-area: info;
-    width: 402px;
-  }
-  .form-impression {
-    grid-area: impression;
-    width: 100%;
-  }
-  .form-impression .form-impression__block {
-    display: grid;
-    grid-template-columns: 280px 280px 250px;
-    /* justify-content: space-around; */
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 53px;
-    padding-right: 53px;
-  }
-  .form-impression .form-impression__title {
-    margin-bottom: 45px;
-  }
-  .form-visited {
-    grid-area: visit;
-    width: 100%;
-  }
-  .form-visited .form-visited__block {
-    display: grid;
-    grid-template-columns: 180px 178px 161px 184px;
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-  .form-visited .form-visited__title {
-    margin-bottom: 59px;
-  }
-  .form-emotions {
-    grid-area: emotions;
-    width: 768px;
-    margin: 0 auto;
-  }
-  .button-sedona {
-    width: 384px;
-  }
 }

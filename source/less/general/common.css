@@ -44,3 +44,26 @@ img {
   max-width: 100%;
   height: auto;
 }
+.button-sedona {
+  background: none;
+  border: none;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  width: 281px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  padding-top: 19px;
+  padding-bottom: 14px;
+  font-size: 21px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.span-hidden {
+  position: absolute;
+  color: #000000;
+  bottom: 24px;
+  right: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
