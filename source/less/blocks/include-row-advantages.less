@@ -1,0 +1,219 @@
+.list-none() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@tablet-width: 768px;
+@desktop-width: 1280px;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.include-row-advantages {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  .list-none();
+  padding-bottom: 52px;
+}
+
+.include-row-advantages__wrapper-house,
+.include-row-advantages__wrapper-food,
+.include-row-advantages__wrapper-souvenir {
+  padding-left: 65px;
+  padding-top: 30px;
+}
+
+.include-row-advantages__wrapper-house {
+  width: 225px;
+}
+
+.include-row-advantages__wrapper-food {
+  width: 232px;
+}
+
+.include-row-advantages__wrapper-souvenir {
+  width: 202px;
+}
+
+.include-row-advantages__title-house {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.include-row-advantages__title-house::before {
+  content: url("../img/icon-house-mobile.svg");
+  position: absolute;
+  left: -50px;
+  bottom: -5px;
+}
+
+.include-row-advantages__title-food {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.include-row-advantages__title-food::before {
+  content: url("../img/icon-burger-mobile.svg");
+  position: absolute;
+  left: -50px;
+  bottom: -5px;
+}
+
+.include-row-advantages__title-souvenir {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.include-row-advantages__title-souvenir::before {
+  content: url("../img/icon-gift-mobile.svg");
+  position: absolute;
+  left: -45px;
+  bottom: -5px;
+}
+
+@media (min-width: @tablet-width) {
+  .include-row-advantages {
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 158px;
+    // padding-left: 36px;
+    // padding-right: 31px;
+    // padding-bottom: 59px;
+  }
+
+  .include-row-advantages__wrapper-house,
+  .include-row-advantages__wrapper-food,
+  .include-row-advantages__wrapper-souvenir {
+    padding: 0;
+  }
+
+  .include-row-advantages__wrapper-house {
+    width: 175px;
+    padding-right: 73px;
+  }
+
+  .include-row-advantages__wrapper-food {
+    width: 175px;
+    padding-right: 70px;
+  }
+
+  .include-row-advantages__wrapper-souvenir {
+    width: 180px;
+  }
+
+  .include-row-advantages__title-house {
+    position: relative;
+  }
+
+  .include-row-advantages__title-house::before {
+    content: url("../img/icon-house.svg");
+    position: absolute;
+    right: -46px;
+    bottom: 46px;
+  }
+
+  .include-row-advantages__title-food {
+    position: relative;
+  }
+
+  .include-row-advantages__title-food::before {
+    content: url("../img/icon-burger.svg");
+    position: absolute;
+    right: -46px;
+    bottom: 46px;
+  }
+
+  .include-row-advantages__title-souvenir {
+    position: relative;
+  }
+
+  .include-row-advantages__title-souvenir::before {
+    content: url("../img/icon-gift.svg");
+    position: absolute;
+    right: -46px;
+    bottom: 46px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .include-row-advantages {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 159px;
+    padding-bottom: 80px;
+    // padding-left: 36px;
+    // padding-right: 31px;
+    // padding-bottom: 59px;
+  }
+
+  .include-row-advantages__wrapper-house,
+  .include-row-advantages__wrapper-food,
+  .include-row-advantages__wrapper-souvenir {
+    padding: 0;
+  }
+
+  .include-row-advantages__wrapper-house {
+    width: 282px;
+    padding-right: 104px;
+  }
+
+  .include-row-advantages__wrapper-food {
+    width: 313px;
+    padding-right: 121px;
+  }
+
+  .include-row-advantages__wrapper-souvenir {
+    width: 244px;
+  }
+
+  .include-row-advantages__title-house {
+    position: relative;
+  }
+
+  .include-row-advantages__title-house::before {
+    content: url("../img/icon-house.svg");
+    position: absolute;
+    right: -46px;
+    bottom: 46px;
+  }
+
+  .include-row-advantages__title-food {
+    position: relative;
+  }
+
+  .include-row-advantages__title-food::before {
+    content: url("../img/icon-burger.svg");
+    position: absolute;
+    right: -46px;
+    bottom: 46px;
+  }
+
+  .include-row-advantages__title-souvenir {
+    position: relative;
+  }
+
+  .include-row-advantages__title-souvenir::before {
+    content: url("../img/icon-gift.svg");
+    position: absolute;
+    right: -46px;
+    bottom: 46px;
+  }
+}

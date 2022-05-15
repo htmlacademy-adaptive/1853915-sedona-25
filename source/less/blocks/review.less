@@ -1,0 +1,84 @@
+@tablet-width: 768px;
+@desktop-width: 1280px;
+
+.review {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    padding-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 83px;
+  }
+}
+
+.review__header {
+  width: 282px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+
+  .review__title {
+    width: 282px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  .review__text-reasons {
+    width: 282px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .review__header {
+    width: 435px;
+    margin: 0 auto;
+    margin-bottom: 102px;
+    padding-bottom: 0;
+
+    .review__title {
+      width: 317px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .review__text-reasons {
+      width: 435px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review__header {
+    width: 483px;
+    margin: 0 auto;
+    margin-bottom: 66px;
+
+    .review__title {
+      width: 483px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 30px;
+    }
+
+    .review__text-reasons {
+      width: 483px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
