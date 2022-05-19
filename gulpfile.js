@@ -15,14 +15,13 @@ import svgstore from 'gulp-svgstore';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+  return gulp.src('source/less/**/*.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -65,21 +64,21 @@ export const createWebp = () => {
 }
 
 //SVG
-const svg = () => {
+export const svg = () => {
   gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => {
-  return gulp.src('source/img/**/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'))
-}
+// const sprite = () => {
+//   return gulp.src('source/img/**/*.svg')
+//     .pipe(svgo())
+//     .pipe(svgstore({
+//       inlineSvg: true
+//     }))
+//     .pipe(rename('sprite.svg'))
+//     .pipe(gulp.dest('build/img'))
+// }
 
 // Server
 
