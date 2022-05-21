@@ -1,0 +1,94 @@
+@white: #ffffff;
+@brown: #766357;
+@blue: #81b3d2;
+@gray: #eeeeee;
+@black: #000000;
+
+@tablet-width: 768px;
+@desktop-width: 1280px;
+
+.first-reason {
+  display: flex;
+  flex-direction: column;
+
+  .first-reason__descrip {
+    display: flex;
+    width: 320px;
+  }
+
+  .first-reason__descrip--blue {
+    background-color: @blue;
+  }
+
+  .first-reason__descrip-block {
+    color: @white;
+    width: 282px;
+    margin: auto;
+    text-align: center;
+    padding-top: 54px;
+    padding-bottom: 40px;
+  }
+
+  .first-reason__title {
+    margin-bottom: 11px;
+  }
+
+  .first-reason__num {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    // .photo-city {
+    //   display: none;
+    // }
+
+    .first-reason__image {
+      display: flex;
+    }
+
+    .first-reason__descrip-block {
+      color: @white;
+      width: 192px;
+      margin: auto;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 44px;
+    }
+
+    .first-reason__descrip {
+      width: 256px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    // .photo-city {
+    //   display: none;
+    // }
+
+    // .first-reason__image {
+    //   background: url("/img/photo-city-desktop.jpg") no-repeat;
+    //   width: 800px;
+    //   height: 256px;
+    // }
+
+    .first-reason__descrip-block {
+      color: @white;
+      width: 280px;
+      margin: auto;
+      text-align: center;
+      padding: 47px 52px 57px 53px;
+    }
+
+    .first-reason__descrip {
+      width: 400px;
+    }
+  }
+}
