@@ -11,6 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
+import del from 'del';
 
 // Styles
 
@@ -27,7 +28,7 @@ export const styles = () => {
 }
 
 //HTML
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
@@ -35,7 +36,7 @@ export const html = () => {
 
 
 //SCRIPTS
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -48,14 +49,14 @@ const optimizeImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
 
 
 //WebP
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
       webp: {}
@@ -64,7 +65,7 @@ export const createWebp = () => {
 }
 
 //SVG
-export const svg = () => {
+const svg = () => {
   gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
@@ -82,6 +83,12 @@ export const svg = () => {
 
 // Server
 
+//CLean
+
+const clean = () => {
+  return del('build');
+};
+
 const server = (done) => {
   browser.init({
     server: {
@@ -95,6 +102,20 @@ const server = (done) => {
 }
 
 // Watcher
+
+//Build
+export const build = gulp.series (
+  clean,
+  copyImages,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    createWebp
+  )
+)
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
