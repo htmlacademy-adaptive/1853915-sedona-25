@@ -2,29 +2,27 @@
 <html class="page" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HTML Academy: Седона</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="less/form.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/form.css" />
 </head>
 
 <body class="page__body">
   <header class="main-header page__main-header">
-    <a href="index.html" class="main-header__logo main-header__logo--visible">
-      <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96">
-    </a>
-
+    <a href="index.html" class="main-header__logo main-header__logo--visible"><img src="img/logo.png"
+        class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96" /></a>
     <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть</span>
       </button>
       <ul class="main-nav__list">
         <button class="button main-nav__cross">
-          <img src="img/Mobile/icon-cross.svg" alt="">
+          <img src="img/Mobile/icon-cross.svg" alt="" />
         </button>
         <li class="main-nav__item">
           <a href="index.html" class="main-nav__link main-nav__link--current">Главная</a>
@@ -33,9 +31,8 @@
           <a href="catalog.html" class="main-nav__link">Фото и видео</a>
         </li>
         <li class="main-nav__item main-nav__item--invisible">
-          <a href="#" class="main-nav__link">
-            <img src="img/logo.png" class="main-header__logo-image-list " alt="CITY OF SEDONA" width="185" height="96">
-          </a>
+          <a href="index.html" class="main-nav__link"><img src="img/logo.png" class="main-header__logo-image-list"
+              alt="CITY OF SEDONA" width="185" height="96" /></a>
         </li>
         <li class="main-nav__item">
           <a href="#" class="main-nav__link">Форма Отзыва</a>
@@ -50,170 +47,109 @@
     <section class="main-container__welcome-sedona welcome-sedona">
       <div class="welcome-sedona__wrapper back-catalog">
         <picture class="welcome-sedona__image">
-          <source media="(min-width: 1280px)" srcset="img/catalog/text-sedona.svg">
-          <source media="(min-width: 768px)" srcset="img/catalog/text-sedona.svg">
-
-          <img src="img/catalog/text-sedona-mobile.svg" class="welcome-sedona__text-index-mobile" alt="Theme">
+          <source media="(min-width: 1280px)" srcset="img/catalog/text-sedona.svg" />
+          <source media="(min-width: 768px)" srcset="img/catalog/text-sedona.svg" />
+          <img src="img/catalog/text-sedona-mobile.svg" class="welcome-sedona__text-index-mobile" alt="Theme" />
         </picture>
-        <div class="welcome-sedona__tri">
-          <!-- eeee -->
-          <!-- <source media="(min-width: 1280px)" srcset="img/catalog/intro-triangle-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/catalog/intro-triangle-tablet.svg">
-
-          <img src="img/intro-triangle.svg" alt="" class="triangle"> -->
-        </div>
+        <div class="welcome-sedona__tri"></div>
       </div>
     </section>
-
     <section class="review">
       <header class="review__header">
-        <h1 class="review__title title">
-          Оставьте свой отзыв
-        </h1>
+        <h1 class="review__title title">Оставьте свой отзыв</h1>
         <p class="review__text-reasons text">
-          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+          посещенных вами достопримечательностях
         </p>
       </header>
-
       <form class="form-sedona" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form-person">
-          <h3 class="form-person__title title">
-            Представьтесь:
-          </h3>
+          <h3 class="form-person__title title">Представьтесь:</h3>
           <p class="paragraph form-person__block">
-            <label class="form-person__field">
-              <span class="form-person__field-label text">Имя*:</span>
-              <input class="form-person__field-control input-text" type="text" name="name" required>
-            </label>
-            <label class="form-person__field">
-              <span class="form-person__field-label text">Фамилия*:</span>
-              <input class="form-person__field-control input-text" type="text" name="surname" required>
-            </label>
-            <label class="form-person__field">
-              <span class="form-person__field-label text">Отчество:</span>
-              <input class="form-person__field-control input-text" type="text" name="fathname">
-            </label>
+            <label class="form-person__field"><span class="form-person__field-label text">Имя*:</span>
+              <input class="form-person__field-control input-text" type="text" name="name" required /></label>
+            <label class="form-person__field"><span class="form-person__field-label text">Фамилия*:</span>
+              <input class="form-person__field-control input-text" type="text" name="surname" required /></label>
+            <label class="form-person__field"><span class="form-person__field-label text">Отчество:</span>
+              <input class="form-person__field-control input-text" type="text" name="fathname" /></label>
           </p>
         </div>
-
         <div class="form-info">
-          <h3 class="form-info__title title">
-            Контактная информация:
-          </h3>
-
+          <h3 class="form-info__title title">Контактная информация:</h3>
           <p class="paragraph form-info__block">
-            <label class="form-info__field tel">
-              <span class="form-info__field-label text">Контактный телефон*:</span>
-              <input class="form-info__field-control input-text" type="tel" name="tel" placeholder="Введите телефон" required>
-              <span class="form-info__img-tel"></span>
-            </label>
-
-            <label class="form-info__field email">
-              <span class="form-info__field-label text">Электронная почта*:</span>
-              <input class="form-info__field-control input-text" type="email" name="eamil" placeholder="Введите e-mail" required>
-              <span class="form-info__img-email"></span>
-            </label>
+            <label class="form-info__field tel"><span class="form-info__field-label text">Контактный телефон*:</span>
+              <input class="form-info__field-control input-text" type="tel" name="tel" placeholder="Введите телефон"
+                required />
+              <span class="form-info__img-tel"></span></label>
+            <label class="form-info__field email"><span class="form-info__field-label text">Электронная почта*:</span>
+              <input class="form-info__field-control input-text" type="email" name="eamil" placeholder="Введите e-mail"
+                required />
+              <span class="form-info__img-email"></span></label>
           </p>
-
         </div>
-
         <div class="form-impression">
           <h3 class="form-impression__title title">
             Ваше Общее впечатление:
           </h3>
-
           <p class="paragraph form-impression__block">
-            <label class="form-impression__field">
-              <input class="form-impression__field-control input-circle" type="radio" name="button" value="positive">
-              <span class="form-impression__field-label">Скорее положительное</span>
-            </label>
-
-            <label class="form-impression__field">
-              <input class="form-impression__field-control input-circle" type="radio" name="button" value="negative">
-              <span class="form-impression__field-label">Скорее отрицательное</span>
-            </label>
-
-            <label class="form-impression__field">
-              <input class="form-impression__field-control input-circle" type="radio" name="button" value="diffic">
-              <span class="form-impression__field-label">Затрудняюсь ответить</span>
-            </label>
+            <label class="form-impression__field"><input class="form-impression__field-control input-circle"
+                type="radio" name="button" value="positive" />
+              <span class="form-impression__field-label">Скорее положительное</span></label>
+            <label class="form-impression__field"><input class="form-impression__field-control input-circle"
+                type="radio" name="button" value="negative" />
+              <span class="form-impression__field-label">Скорее отрицательное</span></label>
+            <label class="form-impression__field"><input class="form-impression__field-control input-circle"
+                type="radio" name="button" value="diffic" />
+              <span class="form-impression__field-label">Затрудняюсь ответить</span></label>
           </p>
         </div>
-
         <div class="form-visited">
           <h3 class="form-visited__title title">
             Посещенные достопримечательности:
           </h3>
-
           <p class="paragraph form-visited__block">
             <label class="form-visited__field">
-              <input class="form-visited__field-control input-square" type="checkbox" name="button" value="positive">
-              <span class="form-visited__field-label">Мост Дьявола</span>
-            </label>
-
+              <input class="form-visited__field-control input-square" type="checkbox" name="button" value="positive" />
+              <span class="form-visited__field-label">Мост Дьявола</span></label>
             <label class="form-visited__field">
-              <input class="form-visited__field-control input-square" type="checkbox" name="button" value="positive">
-              <span class="form-visited__field-label">Гора-Колокол</span>
-            </label>
-
-            <label class="form-visited__field">
-              <input class="form-visited__field-control input-square" type="checkbox" name="button" value="positive">
-              <span class="form-visited__field-label">Слайд-парк</span>
-            </label>
-
-            <label class="form-visited__field">
-              <input class="form-visited__field-control
-              input-square" type="checkbox" name="button" value="positive">
-              <span class="form-visited__field-label">Красные скалы</span>
-            </label>
+              <input class="form-visited__field-control input-square" type="checkbox" name="button" value="positive" />
+              <span class="form-visited__field-label">Гора-Колокол</span></label>
+            <label class="form-visited__field"><input class="form-visited__field-control input-square" type="checkbox"
+                name="button" value="positive" />
+              <span class="form-visited__field-label">Слайд-парк</span></label>
+            <label class="form-visited__field"><input class="form-visited__field-control input-square" type="checkbox"
+                name="button" value="positive" />
+              <span class="form-visited__field-label">Красные скалы</span></label>
           </p>
         </div>
-
         <div class="form-emotions">
-          <h3 class="form-emotions__title title">
-            Опишите свои эмоции:
-          </h3>
-
-          <textarea class="form-emotions__block" name="emotions" id="emotions" placeholder="Опишите подробно все свои восторги "></textarea>
-
-          <button class="button-sedona" type="submit">
-            Отправить отзыв
-          </button>
-
+          <h3 class="form-emotions__title title">Опишите свои эмоции:</h3>
+          <textarea class="form-emotions__block" name="emotions" id="emotions"
+            placeholder="Опишите подробно все свои восторги "></textarea>
+          <button class="button-sedona" type="submit">Отправить отзыв</button>
           <span class="span-hidden">* — обязательные поля</span>
         </div>
-
       </form>
     </section>
   </main>
-
   <footer class="page-footer">
     <a href="#" class="page-footer__visit link-visit">#visitSEDONA</a>
     <ul class="list-social">
       <li class="list-social__item">
-        <a href="" class="list-social__link">
-          <img src="img/vk.svg" alt="Vk">
-        </a>
+        <a href="" class="list-social__link"><img src="img/vk.svg" alt="Vk" /></a>
       </li>
       <li class="list-social__item">
-        <a href="" class="list-social__link">
-          <img src="img/telega.svg" alt="Telegram">
-        </a>
+        <a href="" class="list-social__link"><img src="img/telega.svg" alt="Telegram" /></a>
       </li>
       <li class="list-social__item">
-        <a href="" class="list-social__link">
-          <img src="img/icon-youtube.svg" alt="Youtube">
-        </a>
+        <a href="" class="list-social__link"><img src="img/icon-youtube.svg" alt="Youtube" /></a>
       </li>
     </ul>
-    <a href="#" class="page-footer__html-academy link-html-academy">
-      <span class="link-html-academy__link">Разработано</span>
-      <img src="img/html-academy.svg" alt="" width="27" height="34">
-    </a>
+    <a href="#" class="page-footer__html-academy link-html-academy"><span
+        class="link-html-academy__link">Разработано</span>
+      <img src="img/html-academy.svg" alt="" width="27" height="34" /></a>
   </footer>
-
-  <script src="js/index.js">
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>
