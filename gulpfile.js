@@ -28,7 +28,9 @@ export const styles = () => {
 // HTML
 
 const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 };
 
 // Scripts
@@ -69,10 +71,7 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp
-    .src("source/img/**/*.svg")
-    .pipe(svgo())
-    .pipe(gulp.dest("build/img"));
+  gulp.src("source/img/**/*.svg").pipe(svgo()).pipe(gulp.dest("build/img"));
 
 const sprite = () => {
   return gulp
