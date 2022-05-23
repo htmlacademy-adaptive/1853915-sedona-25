@@ -1,5 +1,21 @@
-@tablet-width: 768px;
-@desktop-width: 1280px;
+@import url("../general/mixins.less");
+@import url("../general/widths.less");
+
+.block-doubt__wrapper-video {
+  position: relative;
+  display: flex;
+
+  .block-doubt__button-play {
+    .button();
+    width: 48px;
+    height: 54px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 .block-doubt {
   width: 280px;
