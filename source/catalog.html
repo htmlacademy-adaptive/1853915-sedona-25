@@ -148,15 +148,19 @@
       <div class="block-doubt">
         <header class="block-doubt__header">
           <h2 class="block-doubt__title title">Всё еще сомневаетесь?</h2>
-          <p class="block-doubt__text text">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не
-            подорожали в очередной раз!
-          </p>
+          <p class="block-doubt__text text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </header>
-        <picture class="block-doubt__video">
-          <source media="(min-width: 1280px)" srcset="img/catalog/video-desktop.jpg" />
-          <source media="(min-width: 768px)" srcset="img/catalog/video-tablet.jpg" />
-          <img src="img/catalog/video-mobile.jpg" alt="" /></picture>
+        <div class="block-doubt__wrapper-video">
+          <picture class="block-doubt__video">
+            <source media="(min-width: 1280px)" srcset="img/catalog/video-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/catalog/video-tablet.jpg">
+            <img src="img/catalog/video-mobile.jpg" alt="">
+          </picture>
+
+          <button class="block-doubt__button-play">
+            <img src="img/catalog/polygon.svg" alt="" width="48" height="54">
+          </button>
+        </div>
       </div>
     </section>
   </main>
