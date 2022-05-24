@@ -17,10 +17,11 @@ import browser from "browser-sync";
 
 export const styles = () => {
   return gulp
-    .src("source/less/*.less", { sourcemaps: true })
+    .src("source/less/style.less", { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([autoprefixer(), csso()]))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest("build/css", { sourcemaps: "." }))
     .pipe(browser.stream());
 };
