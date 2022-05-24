@@ -1,26 +1,28 @@
-@import url("../general/mixins.less");
-@import url("../general/widths.less");
-
 .block-doubt__wrapper-video {
   position: relative;
   display: flex;
+}
 
-  .block-doubt__button-play {
-    .button();
-    width: 48px;
-    height: 54px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.block-doubt__button-play {
+  .button();
+}
+
+.block-doubt__button-play::before {
+  content: url("../../img/catalog/polygon.svg");
+  width: 48px;
+  height: 54px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .block-doubt {
   width: 280px;
   margin: 0 auto;
   padding-top: 48px;
+  padding-bottom: 29px;
 
   .block-doubt__header {
     width: 266px;
@@ -41,7 +43,7 @@
     width: 648px;
     margin: 0 auto;
     padding-top: 58px;
-    padding-bottom: 40px;
+    padding-bottom: 76px;
 
     .block-doubt__header {
       width: 445px;
@@ -58,7 +60,7 @@
     width: 800px;
     margin: 0 auto;
     padding-top: 58px;
-    padding-bottom: 76px;
+    padding-bottom: 120px;
 
     .block-doubt__header {
       width: 445px;

@@ -1,26 +1,3 @@
-.list-none() {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.button() {
-  background: none;
-  border: none;
-  padding: 0;
-  display: block;
-  cursor: pointer;
-}
-
-@tablet-width: 768px;
-@desktop-width: 1280px;
-
-@white: #ffffff;
-@brown: #766357;
-@blue: #81b3d2;
-@gray: #eeeeee;
-@black: #000000;
-
 .welcome-sedona-catalog {
   width: 320px;
   margin: 0 auto;
@@ -54,7 +31,7 @@
 }
 
 .welcome-sedona__wrapper-catalog {
-  background: url("../img/catalog/back-mobile-catalog.jpg") no-repeat;
+  background: @blue url("../img/catalog/back-mobile-catalog.jpg") no-repeat;
   width: 320px;
   height: 214px;
   position: relative;
@@ -63,7 +40,7 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    background: url("../img/catalog/back-tablet-catalog.jpg") no-repeat;
+    background: @blue url("../img/catalog/back-tablet-catalog.jpg") no-repeat;
     width: 768px;
     height: 345px;
     position: relative;
@@ -71,16 +48,10 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
-    .welcome-sedona__image-catalog {
-      position: absolute;
-      left: 20%;
-      top: 45%;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../img/catalog/back-desktop-catalog.jpg") no-repeat;
+    background: @blue url("../img/catalog/back-desktop-catalog.jpg") no-repeat;
     width: 1200px;
     height: 345px;
     position: relative;
@@ -88,34 +59,30 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
-    .welcome-sedona__image-catalog {
-      position: absolute;
-      left: 31%;
-      top: 45%;
-    }
   }
 }
 
-.welcome-sedona__tri-catalog {
-  background: url("../img/intro-triangle.svg") no-repeat;
+
+.welcome-sedona__image-catalog::before {
+  content: url("../../img/intro-triangle.svg");
   width: 320px;
-  height: 56px;
+  height: 57px;
   position: absolute;
   bottom: 0;
+  left: 0;
 
   @media (min-width: @tablet-width) {
-    background: url("../img/catalog/intro-triangle-tablet.svg") no-repeat;
+    content: url("../../img/catalog/intro-triangle-tablet.svg");
     width: 768px;
-    height: 56px;
+    height: 57px;
     position: absolute;
     bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../img/catalog/intro-triangle-desktop.svg") no-repeat;
-    width: 1200px;
-    height: 56px;
+    content: url("../../img/catalog/intro-triangle-desktop.svg");
+    width: 768px;
+    height: 57px;
     position: absolute;
     bottom: 0;
   }
