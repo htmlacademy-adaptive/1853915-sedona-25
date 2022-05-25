@@ -1,86 +1,65 @@
-.list-none() {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.button() {
-  background: none;
-  border: none;
-  padding: 0;
-  display: block;
-  cursor: pointer;
-}
-
-@tablet-width: 768px;
-@desktop-width: 1280px;
-
-@white: #ffffff;
-@brown: #766357;
-@blue: #81b3d2;
-@gray: #eeeeee;
-@black: #000000;
-
-
 .photos-list {
   .list-none();
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+  margin: 0 auto;
+}
 
-  .photos-list__item {
-    padding-bottom: 29px;
-    position: relative;
-  }
+.photos-list__item {
+  padding-bottom: 29px;
+  position: relative;
+}
 
-  .photos-list__title {
-    padding-top: 15px;
-    padding-bottom: 5px;
-  }
+.photos-list__title {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
 
-  .photos-list__author {
-    padding-bottom: 16px;
-  }
+.photos-list__author {
+  padding-bottom: 16px;
+}
 
-  .descrip-block__likes-total {
-    display: flex;
-    align-items: center;
-    column-gap: 14px;
+.descrip-block__likes-total {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+}
 
-    .descrip-block__button {
-      .button();
-    }
+.descrip-block__button {
+  .button();
+}
 
-    .descrip-block__button::before {
-      content: url("../img/catalog/like-icon.svg");
-      display: block;
-      width: 23px;
-      height: 23px;
-    }
-  }
+.descrip-block__button::before {
+  content: url("../img/catalog/like-icon.svg");
+  display: block;
+  width: 23px;
+  height: 23px;
+}
 
-  .photos-list-place {
-    grid-area: place;
-  }
+.photos-list-place {
+  grid-area: place;
+}
 
-  .photos-list-flowers {
-    grid-area: flowers;
-  }
+.photos-list-flowers {
+  grid-area: flowers;
+}
 
-  .photos-list-north {
-    grid-area: north;
-  }
+.photos-list-north {
+  grid-area: north;
+}
 
-  .photos-list-chert {
-    grid-area: chert;
-  }
+.photos-list-chert {
+  grid-area: chert;
+}
 
-  .photos-list__item::after {
-    content: "";
-    position: relative;
-  }
+.photos-list__item::after {
+  content: "";
+  position: relative;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .photos-list {
     width: 648px;
     margin: 0 auto;
     display: grid;
@@ -89,51 +68,53 @@
       "flowers north"
       "chert .";
     row-gap: 0;
-
-    .photos-list__image-block {
-      display: flex;
-    }
-
-    .photos-list__item {
-      padding-bottom: 0;
-    }
-
-    .photos-list__title {
-      padding: 0;
-      padding-bottom: 5px;
-    }
-
-    .photos-list__author {
-      padding: 0;
-    }
-
-    .photos-list__descrip-block {
-      display: flex;
-      background-color: @gray;
-      padding-top: 22px;
-      padding-bottom: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-      justify-content: space-between;
-    }
-
-    .descrip-block__likes-total {
-      column-gap: 9px;
-
-      .descrip-block__button {
-        .button();
-      }
-
-      .descrip-block__button::before {
-        content: url("../img/catalog/like-icon.svg");
-        display: block;
-        width: 23px;
-        height: 23px;
-      }
-    }
   }
 
-  @media (min-width: @desktop-width) {
+  .photos-list__image-block {
+    display: flex;
+  }
+
+  .photos-list__item {
+    padding-bottom: 0;
+  }
+
+  .photos-list__title {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+
+  .photos-list__author {
+    padding: 0;
+  }
+
+  .photos-list__descrip-block {
+    display: flex;
+    background-color: @gray;
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
+
+  .descrip-block__likes-total {
+    column-gap: 9px;
+  }
+
+  .descrip-block__button {
+    .button();
+  }
+
+  .descrip-block__button::before {
+    content: url("../img/catalog/like-icon.svg");
+    display: block;
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos-list {
     min-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -141,68 +122,57 @@
       "place place place"
       "flowers north chert";
     row-gap: 0;
-
-    .photos-list__image-block {
-      display: flex;
-    }
-
-    .photos-list__item {
-      padding-bottom: 0;
-      position: relative;
-    }
-
-    .photos-list__title {
-      padding: 0;
-      padding-bottom: 5px;
-    }
-
-    .photos-list__author {
-      padding: 0;
-      color: @white;
-    }
-
-    .photos-list__descrip-block {
-      background: rgba(0, 0, 0, 0.4);
-      padding-top: 22px;
-      padding-bottom: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      bottom: 0;
-      color: @white;
-    }
-
-    .descrip-block {
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .descrip-block__likes-total {
-      column-gap: 9px;
-
-      .descrip-block__button {
-        .button();
-      }
-
-      .descrip-block__button::before {
-        content: url("../img/catalog/like-icon-desktop.svg");
-        display: block;
-        width: 23px;
-        height: 23px;
-      }
-    }
   }
 
-  // .photos-list__image-place {
-  //   display: none;
-  // }
+  .photos-list__image-block {
+    display: flex;
+  }
 
-  // .photos-list__image-block {
-  //   background: url("/img/catalog/photo-1-tablet.jpg") no-repeat;
-  //   width: 648px;
-  //   height: 400px;
-  //   position: relative;
-  // }
+  .photos-list__item {
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .photos-list__title {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+
+  .photos-list__author {
+    padding: 0;
+    color: @white;
+  }
+
+  .photos-list__descrip-block {
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    color: @white;
+  }
+
+  .descrip-block {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .descrip-block__likes-total {
+    column-gap: 9px;
+  }
+
+  .descrip-block__button {
+    .button();
+  }
+
+  .descrip-block__button::before {
+    content: url("../img/catalog/like-icon-desktop.svg");
+    display: block;
+    width: 23px;
+    height: 23px;
+  }
 }

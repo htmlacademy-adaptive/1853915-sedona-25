@@ -1,150 +1,138 @@
-@white: #ffffff;
-@brown: #766357;
-@blue: #81b3d2;
-@gray: #eeeeee;
-@black: #000000;
-
-@tablet-width: 768px;
-@desktop-width: 1280px;
-
-.list-none() {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-
 .reasons-columns {
   width: 320px;
   display: flex;
   flex-direction: column;
   .list-none();
+}
+
+.reasons-columns__descrip {
+  width: 320px;
+  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+}
+
+.reasons-columns__title {
+  width: 225px;
+  margin: 0 auto;
+  padding-bottom: 23px;
+}
+
+.reasons-columns__num {
+  margin-bottom: 0;
+  padding-bottom: 28px;
+}
+
+.descrip {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reasons-columns__descrip-block-place {
+  width: 268px;
+}
+
+.reasons-columns__descrip-block-road {
+  width: 237px;
+}
+
+.reasons-columns__descrip-block-tourists {
+  width: 284px;
+}
+
+.reasons-columns__descrip--gray {
+  background-color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .reasons-columns {
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+  }
 
   .reasons-columns__descrip {
-    width: 320px;
+    width: 256px;
     padding: 0;
-    padding-top: 26px;
-    padding-bottom: 26px;
-    display: flex;
+    padding-top: 41px;
+    padding-bottom: 43px;
   }
 
   .reasons-columns__title {
-    width: 225px;
-    margin: 0 auto;
     padding-bottom: 23px;
+    width: 110px;
+    margin: 0 auto;
   }
 
   .reasons-columns__num {
     margin-bottom: 0;
-    padding-bottom: 28px;
+    padding-bottom: 34px;
   }
 
   .descrip {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    text-align: center;
   }
 
   .reasons-columns__descrip-block-place {
-    width: 268px;
+    width: 189px;
   }
 
   .reasons-columns__descrip-block-road {
-    width: 237px;
+    width: 162px;
   }
 
   .reasons-columns__descrip-block-tourists {
-    width: 284px;
+    width: 175px;
   }
+}
 
-  .reasons-columns__descrip--gray {
-    background-color: @gray;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    display: flex;
-    flex-direction: row;
-
-    .reasons-columns__descrip {
-      width: 256px;
-      padding: 0;
-      padding-top: 41px;
-      padding-bottom: 43px;
-    }
-
-    .reasons-columns__title {
-      padding-bottom: 23px;
-      width: 110px;
-      margin: 0 auto;
-    }
-
-    .reasons-columns__num {
-      margin-bottom: 0;
-      padding-bottom: 34px;
-    }
-
-    .descrip {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .reasons-columns__descrip-block-place {
-      width: 189px;
-    }
-
-    .reasons-columns__descrip-block-road {
-      width: 162px;
-    }
-
-    .reasons-columns__descrip-block-tourists {
-      width: 175px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .reasons-columns {
     width: 1200px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+  }
 
-    .reasons-columns__descrip {
-      width: 400px;
-      padding: 0;
-      padding-top: 43px;
-      padding-bottom: 61px;
-      display: flex;
-      justify-content: center;
-    }
+  .reasons-columns__descrip {
+    width: 400px;
+    padding: 0;
+    padding-top: 43px;
+    padding-bottom: 61px;
+    display: flex;
+    justify-content: center;
+  }
 
-    .reasons-columns__title {
-      padding-bottom: 23px;
-      width: 110px;
-      margin: 0 auto;
-    }
+  .reasons-columns__title {
+    padding-bottom: 23px;
+    width: 110px;
+    margin: 0 auto;
+  }
 
-    .reasons-columns__num {
-      margin-bottom: 0;
-      padding-bottom: 34px;
-    }
+  .reasons-columns__num {
+    margin-bottom: 0;
+    padding-bottom: 34px;
+  }
 
-    .descrip {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-    }
+  .descrip {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 
-    .reasons-columns__descrip-block-place {
-      width: 315px;
-    }
+  .reasons-columns__descrip-block-place {
+    width: 315px;
+  }
 
-    .reasons-columns__descrip-block-road {
-      width: 290px;
-    }
+  .reasons-columns__descrip-block-road {
+    width: 290px;
+  }
 
-    .reasons-columns__descrip-block-tourists {
-      width: 292px;
-    }
+  .reasons-columns__descrip-block-tourists {
+    width: 292px;
   }
 }
