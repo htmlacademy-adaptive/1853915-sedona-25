@@ -28,34 +28,37 @@
   display: flex;
 }
 
-.list-social__link-vk::before {
-  content: url("../../img/vk.svg");
-  display: block;
-  width: 24px;
-  height: 14px;
+.list-social__item:hover {
+  background-color: @blue-middle;
+}
+
+.list-social__item:active {
+  background-color: @blue-high;
+}
+
+.link:active {
+  opacity: 0.3;
+}
+
+.list-social__link-youtube {
   position: absolute;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.list-social__link-telegram::before {
-  content: url("../../img/telega.svg");
-  display: block;
-  width: 21px;
-  height: 18px;
+.list-social__link-telegram {
   position: absolute;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.list-social__link-youtube::before {
-  content: url("../../img/icon-youtube.svg");
-  display: block;
-  width: 20px;
-  height: 14px;
+.list-social__link-vk {
   position: absolute;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

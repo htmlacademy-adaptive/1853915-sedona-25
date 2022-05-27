@@ -21,14 +21,14 @@
     padding-top: 17px;
     padding-bottom: 15px;
     box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  }
 
-    .main-nav__link {
-      line-height: 26px;
-      font-size: 18px;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #ffffff;
-    }
+  .main-nav__link {
+    line-height: 26px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
   }
 }
 
@@ -41,6 +41,14 @@
   z-index: 1000;
 }
 
+.main-nav__toggle:hover {
+  opacity: 0.6;
+}
+
+.main-nav__toggle:active {
+  opacity: 0.3;
+}
+
 .main-nav__cross {
   .button();
   background: url("../../img/Mobile/icon-cross.svg") no-repeat;
@@ -50,8 +58,20 @@
   z-index: 1000;
 }
 
-.main-nav__link:hover {
-  color: @brown;
+.main-nav__cross:hover {
+  opacity: 0.6;
+}
+
+.main-nav__cross:active {
+  opacity: 0.3;
+}
+
+.main-nav__item {
+  &:hover {
+    .main-nav__link {
+      color: @brown;
+    }
+  }
 }
 
 .main-nav__link {
