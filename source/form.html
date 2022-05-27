@@ -18,18 +18,11 @@
         <span class="visually-hidden">Открыть</span>
       </button>
       <ul class="main-nav__list">
-        <button class="button main-nav__cross">
-          <img src="img/Mobile/icon-cross.svg" alt="" />
-        </button>
         <li class="main-nav__item">
           <a href="index.html" class="main-nav__link main-nav__link--current">Главная</a>
         </li>
         <li class="main-nav__item main-nav__item--second">
           <a href="catalog.html" class="main-nav__link">Фото и видео</a>
-        </li>
-        <li class="main-nav__item main-nav__item--invisible">
-          <a href="index.html" class="main-nav__link"><img src="img/logo.png" class="main-header__logo-image-list"
-              alt="CITY OF SEDONA" width="185" height="96" /></a>
         </li>
         <li class="main-nav__item">
           <a href="#" class="main-nav__link">Форма Отзыва</a>
@@ -42,6 +35,7 @@
   </header>
   <main class="main-container">
     <section class="main-container__welcome-sedona-catalog welcome-sedona">
+      <h2 class="visually-hidden">Sedona</h2>
       <div class="welcome-sedona__wrapper-catalog back-catalog">
         <picture class="welcome-sedona__image-catalog">
           <source media="(min-width: 1280px)" srcset="img/catalog/text-sedona.svg" />
@@ -74,7 +68,8 @@
         <div class="form-info">
           <h3 class="form-info__title title">Контактная информация:</h3>
           <p class="paragraph form-info__block">
-            <label class="form-info__field tel"><span class="form-info__field-label text">Контактный телефон*:</span>
+            <label class="form-info__field tel">
+              <span class="form-info__field-label text">Контактный телефон*:</span>
               <input class="form-info__field-control input-text" type="tel" name="tel" placeholder="Введите телефон"
                 required />
               <span class="form-info__img-tel"></span></label>
@@ -125,6 +120,28 @@
             placeholder="Опишите подробно все свои восторги "></textarea>
           <button class="button-sedona" type="submit">Отправить отзыв</button>
           <span class="span-hidden">* — обязательные поля</span>
+        </div>
+
+        <div class="popup popup-wrong">
+          <div class="popup-wrapper popup-wrong__wrapper">
+            <div class="popup-wrong-content">
+              <h2 class="popup-wrong__title title">Что-то пошло не так!</h2>
+              <p class="popup-wrong__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+              <button type="button" class="popup-wrong__button">ок</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup popup-send">
+          <div class="popup-wrapper popup-send__wrapper">
+            <div class="popup-send-content">
+              <h2 class="popup-send__title title">Ваш отзыв отправлен!</h2>
+              <p class="popup-send__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.</p>
+              <div class="popup-send--gray">
+                <button type="button" class="popup-send__button">Закрыть окно</button>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </section>
