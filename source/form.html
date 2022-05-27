@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="/source/fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/build/css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -84,9 +87,11 @@
             Ваше Общее впечатление:
           </h3>
           <p class="paragraph form-impression__block">
-            <label class="form-impression__field"><input class="form-impression__field-control input-circle"
+            <label class="form-impression__field">
+              <input class="form-impression__field-control input-circle"
                 type="radio" name="button" value="positive" />
-              <span class="form-impression__field-label">Скорее положительное</span></label>
+              <span class="form-impression__field-label">Скорее положительное</span>
+            </label>
             <label class="form-impression__field"><input class="form-impression__field-control input-circle"
                 type="radio" name="button" value="negative" />
               <span class="form-impression__field-label">Скорее отрицательное</span></label>
@@ -118,15 +123,18 @@
           <h3 class="form-emotions__title title">Опишите свои эмоции:</h3>
           <textarea class="form-emotions__block" name="emotions" id="emotions"
             placeholder="Опишите подробно все свои восторги "></textarea>
-          <button class="button-sedona" type="submit">Отправить отзыв</button>
-          <span class="span-hidden">* — обязательные поля</span>
+          <div class="form-emotions__block-button">
+            <button class="button-sedona" type="submit">Отправить отзыв</button>
+            <span class="span-hidden">* — обязательные поля</span>
+          </div>
         </div>
 
         <div class="popup popup-wrong">
           <div class="popup-wrapper popup-wrong__wrapper">
             <div class="popup-wrong-content">
               <h2 class="popup-wrong__title title">Что-то пошло не так!</h2>
-              <p class="popup-wrong__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+              <p class="popup-wrong__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+              </p>
               <button type="button" class="popup-wrong__button">ок</button>
             </div>
           </div>
@@ -136,7 +144,8 @@
           <div class="popup-wrapper popup-send__wrapper">
             <div class="popup-send-content">
               <h2 class="popup-send__title title">Ваш отзыв отправлен!</h2>
-              <p class="popup-send__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.</p>
+              <p class="popup-send__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее
+                время мы опубликуем его на сайте.</p>
               <div class="popup-send--gray">
                 <button type="button" class="popup-send__button">Закрыть окно</button>
               </div>
@@ -159,7 +168,7 @@
         <a href="" class="list-social__link-youtube"></a>
       </li>
     </ul>
-    <a href="#" class="page-footer__html-academy link-html-academy"><span
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__html-academy link-html-academy"><span
         class="link-html-academy__link">Разработано</span>
       <img src="img/html-academy.svg" alt="" width="27" height="34" /></a>
   </footer>

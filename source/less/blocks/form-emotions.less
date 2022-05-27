@@ -28,6 +28,28 @@
   margin-bottom: 20px;
 }
 
+.form-emotions__block-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.span-hidden {
+  font-size: 12px;
+  width: 160px;
+  text-transform: uppercase;
+  display: flex;
+  margin-left: auto;
+  opacity: 0.6;
+  line-height: 21px;
+  text-align: end;
+}
+
+.button-sedona {
+  width: 261px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 @media (min-width: @tablet-width) {
   .form-emotions {
     grid-area: emotions;
@@ -41,10 +63,31 @@
     margin-bottom: 46px;
   }
 
+  .form-emotions__block-button {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .form-emotions__title {
     width: 402px;
     margin-bottom: 28px;
     font-size: 21px;
+  }
+
+  .span-hidden {
+    font-size: 14px;
+    width: 192px;
+    margin: 0;
+    display: inline;
+    text-align: end;
+    opacity: 1;
+  }
+
+  .button-sedona {
+    width: 324px;
+    margin: 0;
   }
 }
 
@@ -53,5 +96,24 @@
     grid-area: emotions;
     width: 768px;
     margin: 0 auto;
+  }
+
+  .span-hidden {
+    font-size: 14px;
+    width: 192px;
+    margin: 0;
+    display: inline;
+    text-align: end;
+    opacity: 1;
+  }
+
+  .button-sedona {
+    width: 384px;
+  }
+
+  .form-emotions__block-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

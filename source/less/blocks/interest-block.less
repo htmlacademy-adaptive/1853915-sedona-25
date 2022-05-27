@@ -20,6 +20,24 @@
   }
 }
 
+.interest-block iframe {
+  border: none;
+  display: block;
+  width: 320px;
+  height: 350px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 350px;
+  }
+}
+
 .block-interest {
   display: flex;
   flex-direction: column;

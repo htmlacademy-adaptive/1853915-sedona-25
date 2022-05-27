@@ -46,6 +46,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/catalog/back-mobile-catalog@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -58,6 +63,11 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/catalog/back-tablet-catalog@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 }
 
@@ -71,6 +81,11 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/catalog/back-desktop-catalog@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 

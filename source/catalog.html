@@ -5,6 +5,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="/source/fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/build/css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -54,10 +57,23 @@
       <div class="photos-videos__photos photos-videos-list">
         <ul class="photos-list">
           <li class="photos-list__item photos-list-place">
-            <picture class="photos-list__image-block">
-              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-1-desktop.jpg 1x, img/catalog/photos/photo-1-desktop@2x.jpg 2x" />
-              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-1-tablet.jpg 1x, img/catalog/photos/photo-1-tablet@2x.jpg 2x" />
-              <img src="img/catalog/photos/photo-1-mobile.jpg" class="photos-list__image-place" srcset="img/catalog/photos/photo-1-mobile@2x.jpg 2x" alt="" /></picture>
+            <a href="#">
+              <picture class="photos-list__image-block">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/catalog/photos/photo-1-desktop.webp 1x, img/catalog/photos/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-1-tablet.webp 1x, img/catalog/photos/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/catalog/photos/photo-1-mobile.webp 1x, img/catalog/photos/photo-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog/photos/photo-1-desktop.jpg 1x, img/catalog/photos/photo-1-desktop@2x.jpg 2x" />
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-1-tablet.jpg 1x, img/catalog/photos/photo-1-tablet@2x.jpg 2x" />
+                <img src="img/catalog/photos/photo-1-mobile.jpg" class="photos-list__image-place"
+                  srcset="img/catalog/photos/photo-1-mobile@2x.jpg 2x" alt="" />
+              </picture>
+            </a>
             <div class="photos-list__descrip-block descrip-block">
               <div class="descrip-block__name">
                 <h3 class="photos-list__title title-photos">
@@ -74,10 +90,23 @@
             </div>
           </li>
           <li class="photos-list__item photos-list-flowers">
-            <picture class="photos-list__image-block">
-              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-2-desktop.jpg 1x, img/catalog/photos/photo-2-desktop@2x.jpg 2x" />
-              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-2-tablet.jpg 1x, img/catalog/photos/photo-2-tablet@2x.jpg 2x" />
-              <img src="img/catalog/photos/photo-2-mobile.jpg" srcset="img/catalog/photos/photo-2-mobile@2x.jpg 2x" class="photos-list__image-place" alt="" /></picture>
+            <a href="#">
+              <picture class="photos-list__image-block">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/catalog/photos/photo-2-desktop.webp 1x, img/catalog/photos/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-2-tablet.webp 1x, img/catalog/photos/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/catalog/photos/photo-2-mobile.webp 1x, img/catalog/photos/photo-2-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog/photos/photo-2-desktop.jpg 1x, img/catalog/photos/photo-2-desktop@2x.jpg 2x" />
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-2-tablet.jpg 1x, img/catalog/photos/photo-2-tablet@2x.jpg 2x" />
+                <img src="img/catalog/photos/photo-2-mobile.jpg" srcset="img/catalog/photos/photo-2-mobile@2x.jpg 2x"
+                  class="photos-list__image-place" alt="" />
+              </picture>
+            </a>
             <div class="photos-list__descrip-block descrip-block">
               <div class="descrip-block__name">
                 <h3 class="photos-list__title title-photos">
@@ -94,10 +123,23 @@
             </div>
           </li>
           <li class="photos-list__item photos-list-north">
-            <picture class="photos-list__image-block">
-              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-3-desktop.jpg 1x, img/catalog/photos/photo-3-desktop@2x.jpg 2x" />
-              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-3-tablet.jpg 1x, img/catalog/photos/photo-3-tablet@2x.jpg 2x" />
-              <img src="img/catalog/photos/photo-3-mobile.jpg" srcset="img/catalog/photos/photo-3-mobile@2x.jpg 2x" class="photos-list__image-place" alt="" /></picture>
+            <a href="#">
+              <picture class="photos-list__image-block">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/catalog/photos/photo-3-desktop.webp 1x, img/catalog/photos/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-3-tablet.webp 1x, img/catalog/photos/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/catalog/photos/photo-3-mobile.webp 1x, img/catalog/photos/photo-3-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog/photos/photo-3-desktop.jpg 1x, img/catalog/photos/photo-3-desktop@2x.jpg 2x" />
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-3-tablet.jpg 1x, img/catalog/photos/photo-3-tablet@2x.jpg 2x" />
+                <img src="img/catalog/photos/photo-3-mobile.jpg" srcset="img/catalog/photos/photo-3-mobile@2x.jpg 2x"
+                  class="photos-list__image-place" alt="" />
+              </picture>
+            </a>
             <div class="photos-list__descrip-block descrip-block">
               <div class="descrip-block__name">
                 <h3 class="photos-list__title title-photos">
@@ -114,10 +156,23 @@
             </div>
           </li>
           <li class="photos-list__item photos-list-chert">
-            <picture class="photos-list__image-block">
-              <source media="(min-width: 1280px)" srcset="img/catalog/photos/photo-4-desktop.jpg 1x , img/catalog/photos/photo-4-desktop@2x.jpg 2x" />
-              <source media="(min-width: 768px)" srcset="img/catalog/photos/photo-4-tablet.jpg 1x, img/catalog/photos/photo-4-tablet@2x.jpg 2x" />
-              <img src="img/catalog/photos/photo-4-mobile.jpg" srcset="img/catalog/photos/photo-4-mobile@2x.jpg 2x" class="photos-list__image-place" alt="" /></picture>
+            <a href="#">
+              <picture class="photos-list__image-block">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/catalog/photos/photo-4-desktop.webp 1x, img/catalog/photos/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-4-tablet.webp 1x, img/catalog/photos/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/catalog/photos/photo-4-mobile.webp 1x, img/catalog/photos/photo-4-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog/photos/photo-4-desktop.jpg 1x , img/catalog/photos/photo-4-desktop@2x.jpg 2x" />
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/photos/photo-4-tablet.jpg 1x, img/catalog/photos/photo-4-tablet@2x.jpg 2x" />
+                <img src="img/catalog/photos/photo-4-mobile.jpg" srcset="img/catalog/photos/photo-4-mobile@2x.jpg 2x"
+                  class="photos-list__image-place" alt="" />
+              </picture>
+            </a>
             <div class="photos-list__descrip-block descrip-block">
               <div class="descrip-block__name">
                 <h3 class="photos-list__title title-photos">Мост Дьявола</h3>
@@ -138,12 +193,21 @@
       <div class="block-doubt">
         <header class="block-doubt__header">
           <h2 class="block-doubt__title title">Всё еще сомневаетесь?</h2>
-          <p class="block-doubt__text text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <p class="block-doubt__text text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+            очередной раз!</p>
         </header>
         <div class="block-doubt__wrapper-video">
           <picture class="block-doubt__video">
-            <source media="(min-width: 1280px)" srcset="img/catalog/video-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/catalog/video-tablet.jpg">
+            <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/catalog/video-desktop.webp 1x, img/catalog/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/catalog/video-tablet.webp 1x, img/catalog/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/video-mobile.webp 1x, img/catalog/video-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1280px)"
+              srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x">
             <img src="img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" alt="">
           </picture>
 
@@ -166,7 +230,7 @@
         <a href="" class="list-social__link-youtube"></a>
       </li>
     </ul>
-    <a href="#" class="page-footer__html-academy link-html-academy"><span
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__html-academy link-html-academy"><span
         class="link-html-academy__link">Разработано</span>
       <img src="img/html-academy.svg" alt="" width="27" height="34" /></a>
   </footer>
