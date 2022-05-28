@@ -30,11 +30,12 @@
   .button();
 }
 
-.descrip-block__button::before {
-  content: url("../img/catalog/like-icon.svg");
-  display: block;
-  width: 23px;
-  height: 23px;
+.descrip-block__button:hover {
+  opacity: 0.6;
+}
+
+.descrip-block__button:active {
+  opacity: 0.3;
 }
 
 .photos-list-place {
@@ -56,6 +57,10 @@
 .photos-list__item::after {
   content: "";
   position: relative;
+}
+
+.like-icon-desktop {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -104,13 +109,6 @@
   .descrip-block__button {
     .button();
   }
-
-  .descrip-block__button::before {
-    content: url("../img/catalog/like-icon.svg");
-    display: block;
-    width: 23px;
-    height: 23px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -122,6 +120,14 @@
       "place place place"
       "flowers north chert";
     row-gap: 0;
+  }
+
+  .like-icon {
+    display: none;
+  }
+
+  .like-icon-desktop {
+    display: block;
   }
 
   .photos-list__image-block {
@@ -167,12 +173,5 @@
 
   .descrip-block__button {
     .button();
-  }
-
-  .descrip-block__button::before {
-    content: url("../img/catalog/like-icon-desktop.svg");
-    display: block;
-    width: 23px;
-    height: 23px;
   }
 }

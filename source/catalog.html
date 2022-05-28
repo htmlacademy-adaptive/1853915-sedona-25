@@ -59,7 +59,7 @@
           <li class="photos-list__item photos-list-place">
             <a href="#">
               <picture class="photos-list__image-block">
-                <source type="image/webp" media="(min-width: 1200px)"
+                <source type="image/webp" media="(min-width: 1280px)"
                   srcset="img/catalog/photos/photo-1-desktop.webp 1x, img/catalog/photos/photo-1-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/catalog/photos/photo-1-tablet.webp 1x, img/catalog/photos/photo-1-tablet@2x.webp 2x">
@@ -84,7 +84,12 @@
                 </p>
               </div>
               <div class="descrip-block__likes-total">
-                <button class="descrip-block__button" type="button"></button>
+                <button class="descrip-block__button" type="button">
+                  <svg width="23" height="21">
+                    <use class="like-icon-desktop" href="img/sprite.svg#like-icon-desktop"></use>
+                    <use class="like-icon" href="img/sprite.svg#like-icon"></use>
+                  </svg>
+                </button>
                 <span class="descrip-block__kol">1350</span>
               </div>
             </div>
@@ -92,7 +97,7 @@
           <li class="photos-list__item photos-list-flowers">
             <a href="#">
               <picture class="photos-list__image-block">
-                <source type="image/webp" media="(min-width: 1200px)"
+                <source type="image/webp" media="(min-width: 1280px)"
                   srcset="img/catalog/photos/photo-2-desktop.webp 1x, img/catalog/photos/photo-2-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/catalog/photos/photo-2-tablet.webp 1x, img/catalog/photos/photo-2-tablet@2x.webp 2x">
@@ -117,7 +122,12 @@
                 </p>
               </div>
               <div class="descrip-block__likes-total">
-                <button class="descrip-block__button" type="button"></button>
+                <button class="descrip-block__button" type="button">
+                  <svg width="23" height="21">
+                    <use class="like-icon-desktop" href="img/sprite.svg#like-icon-desktop"></use>
+                    <use class="like-icon" href="img/sprite.svg#like-icon"></use>
+                  </svg>
+                </button>
                 <span class="descrip-block__kol">143</span>
               </div>
             </div>
@@ -125,7 +135,7 @@
           <li class="photos-list__item photos-list-north">
             <a href="#">
               <picture class="photos-list__image-block">
-                <source type="image/webp" media="(min-width: 1200px)"
+                <source type="image/webp" media="(min-width: 1280px)"
                   srcset="img/catalog/photos/photo-3-desktop.webp 1x, img/catalog/photos/photo-3-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/catalog/photos/photo-3-tablet.webp 1x, img/catalog/photos/photo-3-tablet@2x.webp 2x">
@@ -150,7 +160,12 @@
                 </p>
               </div>
               <div class="descrip-block__likes-total">
-                <button class="descrip-block__button" type="button"></button>
+                <button class="descrip-block__button" type="button">
+                  <svg width="23" height="21">
+                    <use class="like-icon-desktop" href="img/sprite.svg#like-icon-desktop"></use>
+                    <use class="like-icon" href="img/sprite.svg#like-icon"></use>
+                  </svg>
+                </button>
                 <span class="descrip-block__kol">96</span>
               </div>
             </div>
@@ -158,7 +173,7 @@
           <li class="photos-list__item photos-list-chert">
             <a href="#">
               <picture class="photos-list__image-block">
-                <source type="image/webp" media="(min-width: 1200px)"
+                <source type="image/webp" media="(min-width: 1280px)"
                   srcset="img/catalog/photos/photo-4-desktop.webp 1x, img/catalog/photos/photo-4-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/catalog/photos/photo-4-tablet.webp 1x, img/catalog/photos/photo-4-tablet@2x.webp 2x">
@@ -181,7 +196,12 @@
                 </p>
               </div>
               <div class="descrip-block__likes-total">
-                <button class="descrip-block__button" type="button"></button>
+                <button class="descrip-block__button" type="button">
+                  <svg width="23" height="21">
+                    <use class="like-icon-desktop" href="img/sprite.svg#like-icon-desktop"></use>
+                    <use class="like-icon" href="img/sprite.svg#like-icon"></use>
+                  </svg>
+                </button>
                 <span class="descrip-block__kol">254</span>
               </div>
             </div>
@@ -198,7 +218,7 @@
         </header>
         <div class="block-doubt__wrapper-video">
           <picture class="block-doubt__video">
-            <source type="image/webp" media="(min-width: 1200px)"
+            <source type="image/webp" media="(min-width: 1280px)"
               srcset="img/catalog/video-desktop.webp 1x, img/catalog/video-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/catalog/video-tablet.webp 1x, img/catalog/video-tablet@2x.webp 2x">
@@ -218,21 +238,36 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a href="#" class="page-footer__visit link-visit">#visitSEDONA</a>
+    <a href="#" class="page-footer__visit link-visit">#visitsedona</a>
     <ul class="list-social">
       <li class="list-social__item">
-        <a href="" class="list-social__link-vk"></a>
+        <a href="" class="list-social__link-vk link">
+          <svg width="24" height="14">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
       </li>
       <li class="list-social__item">
-        <a href="" class="list-social__link-telegram"></a>
+        <a href="" class="list-social__link-telegram link">
+          <svg width="22" height="18">
+            <use href="img/sprite.svg#telega"></use>
+          </svg>
+        </a>
       </li>
       <li class="list-social__item">
-        <a href="" class="list-social__link-youtube"></a>
+        <a href="" class="list-social__link-youtube link">
+          <svg width="20" height="14">
+            <use href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </li>
     </ul>
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__html-academy link-html-academy"><span
-        class="link-html-academy__link">Разработано</span>
-      <img src="img/html-academy.svg" alt="" width="27" height="34" /></a>
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__html-academy link-html-academy">
+      <span class="link-html-academy__link">Разработано</span>
+      <svg width="27" height="35">
+        <use href="img/sprite.svg#html-academy"></use>
+      </svg>
+    </a>
   </footer>
   <script src="js/menu.js"></script>
 </body>
