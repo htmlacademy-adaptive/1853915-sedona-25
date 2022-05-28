@@ -1,22 +1,22 @@
 let menu = document.querySelector(".main-nav__list");
 let button_open = document.querySelector(".main-nav__toggle");
+let button = document.querySelector("button");
 let button_close = document.querySelector(".main-nav__cross");
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 
-button_open.addEventListener("click", basket);
+button.addEventListener("click", basket);
 
 function basket() {
-  menu.classList.add("display_menu");
-}
-button_close.addEventListener("click", close_basket_catalog);
-
-function close_basket_catalog() {
-  menu.classList.remove("display_menu");
+  button.classList.toggle("main-nav__toggle")
+  button.classList.toggle("main-nav__cross")
+  menu.classList.toggle("display_menu");
 }
 
 function handleTabletChange(e) {
   if (e.matches) {
     menu.classList.remove("display_menu");
+    button.classList.remove("main-nav__cross")
+    button.classList.add("main-nav__toggle")
   }
 }
 mediaQuery.addListener(handleTabletChange)

@@ -1,16 +1,17 @@
-@tablet-width: 768px;
-@desktop-width: 1280px;
-
 .about-sedona {
   width: 320px;
   margin: 0 auto;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .about-sedona {
     width: 768px;
     margin: 0 auto;
   }
+}
 
-  @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .about-sedona {
     width: 1280px;
     margin: 0 auto;
   }
@@ -20,20 +21,28 @@
   width: 282px;
   margin: 0 auto;
   padding-bottom: 45px;
+  position: relative;
+}
 
-  .about-sedona__title {
-    width: 282px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 35px;
-    font-size: 18px;
-  }
+.about-sedona__header::before {
+  content: url("../../img/tri-top.svg");
+  position: absolute;
+  bottom: -20px;
+  left: -19px;
+}
 
-  .about-sedona__text-reasons {
-    width: 282px;
-    margin: 0 auto;
-    text-align: center;
-  }
+.about-sedona__title {
+  width: 270px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+
+.about-sedona__text-reasons {
+  width: 282px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -41,19 +50,24 @@
     width: 520px;
     margin: 0 auto;
     margin-bottom: 56px;
+  }
 
-    .about-sedona__title {
-      width: 520px;
-      margin: 0 auto;
-      text-align: center;
-      margin-bottom: 35px;
-    }
+  .about-sedona__header::before {
+    content: "";
+    display: none;
+  }
 
-    .about-sedona__text-reasons {
-      width: 520px;
-      margin: 0 auto;
-      text-align: center;
-    }
+  .about-sedona__title {
+    width: 520px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .about-sedona__text-reasons {
+    width: 520px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -62,19 +76,24 @@
     width: 483px;
     margin: 0 auto;
     padding-bottom: 45px;
+  }
 
-    .about-sedona__title {
-      width: 483px;
-      margin: 0 auto;
-      text-align: center;
-      margin-bottom: 35px;
-      font-size: 21px;
-    }
+  .about-sedona__header::before {
+    content: "";
+    display: none;
+  }
 
-    .about-sedona__text-reasons {
-      width: 483px;
-      margin: 0 auto;
-      text-align: center;
-    }
+  .about-sedona__title {
+    width: 483px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 21px;
+  }
+
+  .about-sedona__text-reasons {
+    width: 483px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
