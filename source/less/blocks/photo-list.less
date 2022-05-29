@@ -2,61 +2,39 @@
   .list-none();
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
   margin: 0 auto;
 }
 
 .photos-list__item {
-  padding-bottom: 29px;
+  padding-bottom: 25px;
+  padding-top: 24px;
   position: relative;
-}
-
-.photos-list__title {
-  padding-top: 15px;
-  padding-bottom: 5px;
-}
-
-.photos-list__author {
-  padding-bottom: 16px;
-}
-
-.descrip-block__likes-total {
-  display: flex;
-  align-items: center;
-  column-gap: 14px;
-}
-
-.descrip-block__button {
-  .button();
-}
-
-.descrip-block__button:hover {
-  opacity: 0.6;
-}
-
-.descrip-block__button:active {
-  opacity: 0.3;
-}
-
-.photos-list-place {
-  grid-area: place;
-}
-
-.photos-list-flowers {
-  grid-area: flowers;
-}
-
-.photos-list-north {
-  grid-area: north;
-}
-
-.photos-list-chert {
-  grid-area: chert;
 }
 
 .photos-list__item::after {
   content: "";
-  position: relative;
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background: @gray-light;
+  left: -20px;
+  margin-top: 25px;
+}
+
+.photos-list__place {
+  grid-area: place;
+}
+
+.photos-list__flowers {
+  grid-area: flowers;
+}
+
+.photos-list__north {
+  grid-area: north;
+}
+
+.photos-list__chert {
+  grid-area: chert;
 }
 
 .like-icon-desktop {
@@ -80,34 +58,12 @@
   }
 
   .photos-list__item {
-    padding-bottom: 0;
-  }
-
-  .photos-list__title {
-    padding: 0;
-    padding-bottom: 5px;
-  }
-
-  .photos-list__author {
     padding: 0;
   }
 
-  .photos-list__descrip-block {
-    display: flex;
-    background-color: @gray;
-    padding-top: 22px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: space-between;
-  }
-
-  .descrip-block__likes-total {
-    column-gap: 9px;
-  }
-
-  .descrip-block__button {
-    .button();
+  .photos-list__item::after {
+    content: "";
+    display: none;
   }
 }
 
@@ -135,43 +91,12 @@
   }
 
   .photos-list__item {
-    padding-bottom: 0;
+    padding: 0;
     position: relative;
   }
 
-  .photos-list__title {
-    padding: 0;
-    padding-bottom: 5px;
-  }
-
-  .photos-list__author {
-    padding: 0;
-    color: @white;
-  }
-
-  .photos-list__descrip-block {
-    background: rgba(0, 0, 0, 0.4);
-    padding-top: 22px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    bottom: 0;
-    color: @white;
-  }
-
-  .descrip-block {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .descrip-block__likes-total {
-    column-gap: 9px;
-  }
-
-  .descrip-block__button {
-    .button();
+  .photos-list__item::after {
+    content: "";
+    display: none;
   }
 }

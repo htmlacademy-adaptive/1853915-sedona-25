@@ -8,7 +8,7 @@
 .form-impression__block {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 40px;
   margin-left: 20px;
 }
 
@@ -17,6 +17,7 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .form-impression__field {
@@ -25,17 +26,36 @@
   column-gap: 16px;
 }
 
-.form-impression__field:hover {
-  opacity: 0.6;
+.form-impression__field-control {
+  appearance: none;
+  .visually-hidden();
 }
 
-.form-impression__field:active {
-  opacity: 0.3;
+.form-impression__control-mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background: @gray-form;
+  border: none;
+  border-radius: 50%;
+}
+
+.form-impression__field-control[type="radio"]:checked + .form-impression__control-mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: @black-form;
+  border-radius: 50%;
+  content: "";
 }
 
 .form-impression__field-label {
   font-size: 18px;
   font-weight: bold;
+  padding-left: 62px;
 }
 
 @media (min-width: @tablet-width) {

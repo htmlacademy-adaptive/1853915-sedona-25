@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HTML Academy: Седона</title>
-  <link rel="preload" href="/source/fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/source/fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/build/css/style.min.css" as="style">
+  <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body class="page__body">
+<body class="page__body body">
   <header class="main-header page__main-header">
     <a href="index.html" class="main-header__logo main-header__logo--visible"><img src="img/logo.png"
         class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96" /></a>
@@ -37,7 +37,7 @@
     </nav>
   </header>
   <main class="main-container">
-    <section class="main-container__welcome-sedona-catalog welcome-sedona">
+    <section class="main-container__welcome-sedona-catalog welcome-sedona-catalog">
       <h2 class="visually-hidden">Sedona</h2>
       <div class="welcome-sedona__wrapper-catalog back-catalog">
         <picture class="welcome-sedona__image-catalog">
@@ -71,15 +71,17 @@
         <div class="form-info">
           <h3 class="form-info__title title">Контактная информация:</h3>
           <p class="paragraph form-info__block">
-            <label class="form-info__field tel">
+            <label class="form-info__field">
               <span class="form-info__field-label text">Контактный телефон*:</span>
               <input class="form-info__field-control input-text" type="tel" name="tel" placeholder="Введите телефон"
                 required />
-              <span class="form-info__img-tel"></span></label>
-            <label class="form-info__field email"><span class="form-info__field-label text">Электронная почта*:</span>
+              <span class="form-info__img-tel"></span>
+            </label>
+            <label class="form-info__field"><span class="form-info__field-label text">Электронная почта*:</span>
               <input class="form-info__field-control input-text" type="email" name="eamil" placeholder="Введите e-mail"
                 required />
-              <span class="form-info__img-email"></span></label>
+              <span class="form-info__img-email"></span>
+            </label>
           </p>
         </div>
         <div class="form-impression">
@@ -87,16 +89,21 @@
             Ваше Общее впечатление:
           </h3>
           <p class="paragraph form-impression__block">
-            <label class="form-impression__field">
-              <input class="form-impression__field-control input-circle" type="radio" name="button" value="positive" />
+            <label class="form-impression__field form-impression__control">
+              <input class="form-impression__field-control" type="radio" name="button" value="positive" />
+              <span class="form-impression__control-mark"></span>
               <span class="form-impression__field-label">Скорее положительное</span>
             </label>
-            <label class="form-impression__field"><input class="form-impression__field-control input-circle"
-                type="radio" name="button" value="negative" />
-              <span class="form-impression__field-label">Скорее отрицательное</span></label>
-            <label class="form-impression__field"><input class="form-impression__field-control input-circle"
-                type="radio" name="button" value="diffic" />
-              <span class="form-impression__field-label">Затрудняюсь ответить</span></label>
+            <label class="form-impression__field form-impression__control">
+              <input class="form-impression__field-control" type="radio" name="button" value="negative" />
+              <span class="form-impression__control-mark"></span>
+              <span class="form-impression__field-label">Скорее отрицательное</span>
+            </label>
+            <label class="form-impression__field form-impression__control">
+              <input class="form-impression__field-control" type="radio" name="button" value="diffic" />
+              <span class="form-impression__control-mark"></span>
+              <span class="form-impression__field-label">Затрудняюсь ответить</span>
+            </label>
           </p>
         </div>
         <div class="form-visited">
@@ -104,18 +111,25 @@
             Посещенные достопримечательности:
           </h3>
           <p class="paragraph form-visited__block">
-            <label class="form-visited__field">
-              <input class="form-visited__field-control input-square" type="checkbox" name="bridge" value="button" />
-              <span class="form-visited__field-label">Мост Дьявола</span></label>
-            <label class="form-visited__field">
-              <input class="form-visited__field-control input-square" type="checkbox" name="mountain" value="button" />
-              <span class="form-visited__field-label">Гора-Колокол</span></label>
-            <label class="form-visited__field"><input class="form-visited__field-control input-square" type="checkbox"
-                name="park" value="button" />
+            <label class="form-visited__field form-visited__control">
+              <input class="form-visited__field-control" type="checkbox" name="bridge" value="button" />
+              <span class="form-visited__control-mark"></span>
+              <span class="form-visited__field-label">Мост Дьявола</span>
+            </label>
+            <label class="form-visited__field form-visited__control">
+              <input class="form-visited__field-control" type="checkbox" name="mountain" value="button" />
+              <span class="form-visited__control-mark"></span>
+              <span class="form-visited__field-label">Гора-Колокол</span>
+            </label>
+            <label class="form-visited__field form-visited__control"><input class="form-visited__field-control"
+                type="checkbox" name="park" value="button" />
+              <span class="form-visited__control-mark"></span>
               <span class="form-visited__field-label">Слайд-парк</span></label>
-            <label class="form-visited__field"><input class="form-visited__field-control input-square" type="checkbox"
-                name="rocks" value="button" />
-              <span class="form-visited__field-label">Красные скалы</span></label>
+            <label class="form-visited__field form-visited__control"><input class="form-visited__field-control"
+                type="checkbox" name="rocks" value="button" />
+              <span class="form-visited__control-mark"></span>
+              <span class="form-visited__field-label">Красные скалы</span>
+            </label>
           </p>
         </div>
         <div class="form-emotions">
@@ -123,18 +137,19 @@
           <textarea class="form-emotions__block" name="emotions" id="emotions"
             placeholder="Опишите подробно все свои восторги "></textarea>
           <div class="form-emotions__block-button">
-            <button class="button-sedona" type="submit">Отправить отзыв</button>
-            <span class="span-hidden">* — обязательные поля</span>
+            <button class="form-emotions__button-sedona" type="submit">Отправить отзыв</button>
+            <span class="form-emotions__span-hidden">* — обязательные поля</span>
           </div>
         </div>
 
         <div class="popup popup-wrong">
           <div class="popup-wrapper popup-wrong__wrapper">
             <div class="popup-wrong-content">
-              <h2 class="popup-wrong__title title">Что-то пошло не так!</h2>
-              <p class="popup-wrong__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+              <h2 class="popup-wrong-content__title title">Что-то пошло не так!</h2>
+              <p class="popup-wrong-content__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их
+                заполнить
               </p>
-              <button type="button" class="popup-wrong__button">ок</button>
+              <button type="button" class="popup-wrong-content__button">ок</button>
             </div>
           </div>
         </div>
@@ -142,11 +157,12 @@
         <div class="popup popup-send">
           <div class="popup-wrapper popup-send__wrapper">
             <div class="popup-send-content">
-              <h2 class="popup-send__title title">Ваш отзыв отправлен!</h2>
-              <p class="popup-send__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее
+              <h2 class="popup-send-content__title title">Ваш отзыв отправлен!</h2>
+              <p class="popup-send-content__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В
+                ближайшее
                 время мы опубликуем его на сайте.</p>
-              <div class="popup-send--gray">
-                <button type="button" class="popup-send__button">Закрыть окно</button>
+              <div class="popup-send-content--gray">
+                <button type="button" class="popup-send-content__button">Закрыть окно</button>
               </div>
             </div>
           </div>

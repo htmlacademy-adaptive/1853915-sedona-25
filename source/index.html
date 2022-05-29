@@ -5,22 +5,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HTML Academy: Седона</title>
-  <link rel="preload" href="/source/fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/source/fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/build/css/style.min.css" as="style">
+  <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body class="page__body">
+<body class="page__body body">
   <header class="main-header page__main-header">
-    <a href="index.html" class="main-header__logo main-header__logo--visible">
-      <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96" />
-    </a>
     <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть</span>
       </button>
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav--open">
         <li class="main-nav__item">
           <a href="index.html" class="main-nav__link main-nav__link--current">Главная</a>
         </li>
@@ -34,6 +31,9 @@
           <a href="https://htmlacademy.ru" class="main-nav__link">HTML ACADEMY</a>
         </li>
       </ul>
+      <a href="index.html" class="main-nav__logo main-header__logo--visible">
+        <img src="img/logo.png" class="main-header__logo-image" alt="CITY OF SEDONA" width="185" height="96" />
+      </a>
     </nav>
   </header>
   <main class="main-container">
@@ -145,7 +145,7 @@
         <div class="other-reasons">
           <ul class="reasons-columns">
             <li class="reasons-columns__descrip reasons-columns__descrip--gray">
-              <div class="reasons-columns__descrip-block-place descrip">
+              <div class="reasons-columns__descrip-block-place">
                 <h3 class="reasons-columns__title title">
                   Небольшая площадь
                 </h3>
@@ -156,7 +156,7 @@
               </div>
             </li>
             <li class="reasons-columns__descrip reasons-columns__descrip--gray">
-              <div class="reasons-columns__descrip-block-road descrip">
+              <div class="reasons-columns__descrip-block-road">
                 <h3 class="reasons-columns__title title">Красивая дорога</h3>
                 <span class="reasons-columns__num num">— №4 —</span>
                 <p class="reasons-columns__text text">
@@ -165,7 +165,7 @@
               </div>
             </li>
             <li class="reasons-columns__descrip reasons-columns__descrip--gray">
-              <div class="reasons-columns__descrip-block-tourists descrip">
+              <div class="reasons-columns__descrip-block-tourists">
                 <h3 class="reasons-columns__title title">Мало туристов</h3>
                 <span class="reasons-columns__num num">— №5 —</span>
                 <p class="reasons-columns__text text">
@@ -180,16 +180,17 @@
     <section class="interest">
       <div class="interest-block">
         <div class="block-interest">
-          <h2 class="block-interest__title title">Заинтересовались</h2>
+          <h2 class="block-interest__title title">Заинтересовались?</h2>
           <p class="block-interest__text text">
             Укажите предполагаемые даты поездки, и мы покажем вам лучшие
             предложения гостиниц в седоне
           </p>
           <a href="#" class="block-interest__button">Найти гостиницу</a>
         </div>
-        <iframe
+        <!-- <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375626.704468416!2d-111.95801667616117!3d34.28653374117212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1653639294595!5m2!1sru!2sru"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe> -->
       </div>
     </section>
   </main>
@@ -218,7 +219,7 @@
         </a>
       </li>
     </ul>
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__html-academy link-html-academy">
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__html-academy">
       <span class="link-html-academy__link">Разработано</span>
       <svg width="27" height="35">
         <use href="img/sprite.svg#html-academy"></use>
