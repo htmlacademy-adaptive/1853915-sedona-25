@@ -16,12 +16,23 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .form-person__field {
   display: flex;
   flex-direction: column;
 }
+
+.form-person__field-control:hover {
+  background-color: @gray-light;
+}
+
+.form-person__field-control:active {
+  background-color: @white;
+  outline: 4px solid @gray-light;
+}
+
 
 .form-person__field-label {
   margin-left: 16px;

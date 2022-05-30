@@ -12,30 +12,28 @@
 }
 
 .form-info__title {
-  width: 238px;
+  width: 280px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .form-info__field {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form-info__field-label {
   margin-left: 16px;
 }
 
-.tel {
-  position: relative;
-}
-
 .form-info__img-tel {
   width: 58px;
   height: 58px;
   position: absolute;
-  background-color: #e6e6e6;
+  background-color: @gray-light-lit;
   bottom: 0;
   box-sizing: border-box;
   right: 0;
@@ -50,15 +48,11 @@
   margin: auto;
 }
 
-.email {
-  position: relative;
-}
-
 .form-info__img-email {
   width: 58px;
   height: 58px;
   position: absolute;
-  background-color: #e6e6e6;
+  background-color: @gray-light-lit;
   bottom: 0;
   box-sizing: border-box;
   right: 0;

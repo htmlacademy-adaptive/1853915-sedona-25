@@ -8,7 +8,7 @@
 .form-emotions__block {
   font-family: "PT Sans", sans-serif;
   padding: 0;
-  width: 280px;
+  width: 281px;
   height: 150px;
   margin: 0 auto;
   background-color: @gray;
@@ -26,6 +26,7 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .form-emotions__block-button {
@@ -33,7 +34,7 @@
   flex-direction: column;
 }
 
-.span-hidden {
+.form-emotions__span-hidden {
   font-size: 12px;
   width: 160px;
   text-transform: uppercase;
@@ -44,22 +45,29 @@
   text-align: end;
 }
 
-.button-sedona {
-  width: 261px;
-  padding-left: 10px;
-  padding-right: 10px;
+.form-emotions__button-sedona {
+  font-family: "PT Sans", sans-serif;
+  width: 281px;
+  padding: 19px 10px 14px 10px;
+  box-sizing: border-box;
+  background-color: @blue;
+  color: @white;
+  font-size: 21px;
+  margin: 0 auto;
+  border: none;
+  text-transform: uppercase;
 }
 
-.button-sedona:hover {
+.form-emotions__button-sedona:hover {
   background-color: @blue-middle;
 }
 
-.button-sedona:active {
+.form-emotions__button-sedona:active {
   background-color: @blue-high;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-sedona:disabled {
+.form-emotions__button-sedona:disabled {
   background-color: @brown-light;
 }
 
@@ -89,7 +97,7 @@
     font-size: 21px;
   }
 
-  .span-hidden {
+  .form-emotions__span-hidden {
     font-size: 14px;
     width: 192px;
     margin: 0;
@@ -98,7 +106,7 @@
     opacity: 1;
   }
 
-  .button-sedona {
+  .form-emotions__button-sedona {
     width: 324px;
     margin: 0;
   }
@@ -111,7 +119,7 @@
     margin: 0 auto;
   }
 
-  .span-hidden {
+  .form-emotions__span-hidden {
     font-size: 14px;
     width: 192px;
     margin: 0;
@@ -120,7 +128,7 @@
     opacity: 1;
   }
 
-  .button-sedona {
+  .form-emotions__button-sedona {
     width: 384px;
   }
 
