@@ -16,16 +16,20 @@
 @media (min-width: @desktop-width) {
   .interest-block {
     width: 1200px;
+    padding-top: 50px;
     padding-bottom: 36px;
   }
 }
 
-.interest-block iframe {
+.interest-block__map-interect {
   border: none;
-  display: block;
   width: 320px;
   height: 350px;
   margin: 0 auto;
+
+  &--none-js {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     width: 768px;

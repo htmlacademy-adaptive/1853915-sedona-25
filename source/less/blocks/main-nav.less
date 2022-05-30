@@ -6,6 +6,45 @@
 
 .main-nav__list {
   display: none;
+
+  @media (max-width: @mobile-width) {
+    & {
+      position: absolute;
+    }
+
+    &--none-js {
+      position: static;
+    }
+
+    &--open {
+      z-index: 10;
+      left: 0;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      background: #81b3d2;
+      width: 320px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 223px;
+      top: 0;
+
+      .main-nav__item {
+        padding-top: 17px;
+        padding-bottom: 15px;
+        box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+      }
+
+      .main-nav__link {
+        line-height: 26px;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
 }
 
 .main-nav__logo {
@@ -14,35 +53,6 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.main-nav--open {
-  z-index: 10;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background: #81b3d2;
-  width: 320px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 223px;
-  top: 0;
-
-  .main-nav__item {
-    padding-top: 17px;
-    padding-bottom: 15px;
-    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
-  }
-
-  .main-nav__link {
-    line-height: 26px;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #ffffff;
-  }
 }
 
 .main-nav--close {
@@ -58,6 +68,29 @@
   z-index: 1000;
   right: 20px;
   top: 15px;
+
+  &--none-js {
+    display: none;
+  }
+
+  &--cross {
+    .button();
+    background: url("../../img/icon-cross.svg") no-repeat;
+    width: 23px;
+    height: 22px;
+    position: absolute;
+    z-index: 1000;
+    right: 20px;
+    top: 15px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .main-nav__toggle:hover {
@@ -65,25 +98,6 @@
 }
 
 .main-nav__toggle:active {
-  opacity: 0.3;
-}
-
-.main-nav__cross {
-  .button();
-  background: url("../../img/icon-cross.svg") no-repeat;
-  width: 23px;
-  height: 22px;
-  position: absolute;
-  z-index: 1000;
-  right: 20px;
-  top: 15px;
-}
-
-.main-nav__cross:hover {
-  opacity: 0.6;
-}
-
-.main-nav__cross:active {
   opacity: 0.3;
 }
 
@@ -111,6 +125,10 @@
     .list-none();
   }
 
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav {
     padding: 0;
   }
@@ -130,10 +148,6 @@
 
   .main-nav__item--second {
     margin-right: 180px;
-  }
-
-  .main-nav__toggle {
-    display: none;
   }
 
   .main-nav__link {

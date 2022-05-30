@@ -1,27 +1,21 @@
 let menu = document.querySelector("ul");
 let button_open = document.querySelector(".main-nav__toggle");
+let iframe = document.querySelector('iframe');
+let map = document.querySelector('.interest-block__map');
 let button = document.querySelector("button");
 let button_close = document.querySelector(".main-nav__cross");
-const mediaQuery = window.matchMedia('(min-width: 768px)')
 
-menu.classList.remove("main-nav--open");
-menu.classList.add("main-nav--close");
-button_open.style.display = "block";
-button_close.style.display = "block";
+menu.classList.remove('main-nav__list--open');
+menu.classList.remove("main-nav__list--none-js");
+button.classList.remove("main-nav__toggle--none-js");
 
-
-button_open.addEventListener("click", basket);
+button.addEventListener("click", basket);
 
 function basket() {
-  button.classList.add("main-nav__cross");
+  menu.classList.toggle("main-nav__list--open");
+  button.classList.toggle("main-nav__toggle--cross");
 }
 
-function handleTabletChange(e) {
-  if (e.matches) {
-    // menu.classList.remove("display-menu");
-    // button.classList.remove("main-nav__cross")
-    // button.classList.add("main-nav__toggle")
-  }
-}
-mediaQuery.addListener(handleTabletChange)
-handleTabletChange(mediaQuery)
+map.classList.add('interest-block__map-interect--none-js');
+iframe.classList.remove('interest-block__map-interect--none-js');
+
